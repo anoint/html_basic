@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	dl{width: 600px; margin: 30px auto;}
+	dl dt{width: 600px; height: 60px; font-size: 20px;
+		  text-indent: 15px; background: skyblue; line-height: 3;
+		  border-bottom: 1px solid #000;}
+	dl dd{width: 600px; height: 300px;
+		  background: #336699; color: #fff;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		//모든 dd는 숨기고 첫번째만 보이게
+		$("dl dd").hide().first().slideDown();
+
+		$("dl dt").click(function(){
+			$("dl dd").slideUp();
+			//나의 다음이 활성화
+			$(this).next().slideDown();
+			//활성화 되어있는것 다시 누르면 닫혀있게 바꾸기.
+		});
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<h2>아코디언 만들기</h2>
+	<dl>
+		<dt>제목1</dt>
+		<dd>내용</dd>
+		<dt>제목2</dt>
+		<dd>내용</dd>
+		<dt>제목3</dt>
+		<dd>내용</dd>
+		<dt>제목4</dt>
+		<dd>내용</dd>
+
+	</dl>
+</body>
+</html>
+
+
+
+
+

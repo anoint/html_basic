@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<style>
+	.wrap{width: 1000px; height: 576px; position: relative;}
+	.banner{}
+	.banner li{width: 1000px; height: 576px; position: absolute; left: 0; top: 0;}
+	.wrap .paging{position: absolute; right: 30px; top: 20px;}
+	.wrap .paging li{ width: 30px; height: 30px; background: yellow; 
+					  font-size: 20px; line-height: 30px; text-align: center;
+					  border: 1px solid #000; float: left; margin-right: 10px;}
+	.wrap .paging li.on{background: skyblue; color: #fff;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var cnt = 0; imgUrl="";
+		 
+		/* 
+		//li모두 숨기고 첫번째만 보이게
+		$(".banner li").hide().first().show();
+		
+		//paging li 두번째 누르면 해당 이미지만 보이게 
+		$(".paging li").click(function(){
+			cnt = $(this).index()
+			$(".banner li").hide().eq(cnt).fadeIn();
+			$(".paging li").removeClass("on");
+			$(this).addClass("on");
+			//$(".paging li").eq(cnt).addClass("on");
+		*/
+		//이미지 효과 animate로 처리하기, opacity
+		$(".banner li").css("opacity","0").first().css("opacity","1");
+		$(".paging li").click(function(){
+			cnt = $(this).index()
+			$(".banner li").css("opacity","0");
+			$(".banner li").eq(cnt).animate({opacity:1},400);
+			$(".paging li").removeClass("on");
+			$(".paging li").eq(cnt).addClass("on");
+			//$(this).addClass("on");
+			//같은걸 다시한번 누르면 그대로 있지 않고 다시 반응한다.
+		});
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<!-- div.wrap>ul.banner>li*5>img[src=images/img.png]^^ul.paging>li*5 -->
+	<div class="wrap">
+		<ul class="banner">
+			<li><img src="images/img0.png" alt=""></li>
+			<li><img src="images/img1.png" alt=""></li>
+			<li><img src="images/img2.png" alt=""></li>
+			<li><img src="images/img3.png" alt=""></li>
+			<li><img src="images/img4.png" alt=""></li>
+		</ul>
+		<ul class="paging">
+			<li class="on">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+

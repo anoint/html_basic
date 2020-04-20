@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="js/jquery.js"></script>
+	<style>
+		.box{width: 800px; height: 600px; border: 1px solid #000; padding: 20px; margin: auto;}
+		.box h1{font-size: 50px; background: yellow;}
+		.box h2{font-size: 40px; background: green;}
+		.box h3{font-size: 30px; background: blue;}
+		.box h4{font-size: 20px; background: pink;}
+		.box p{background: skyblue;}
+		.box img{width: 400px;}
+	</style>
+	<script>
+		$(function(){
+		////////////////////////////////////////////////////
+			//$("대상").append("요소") -> 대상 맨 뒤에 요소를 이동해라(붙여라)
+			//$("대상").prepend("요소") -> 대상 맨 앞으로 이동해라
+			var h1 = $("h1");
+			$(".box").append(h1); //맨뒤로 이동하기
+			var h2 = $("h2");
+			$(".box").append(h2);
+			var p = $("p");
+			$(".box").append(p);
+			var img = $("img");
+			$(".box").append(img);
+			var h3 = $("h3");
+			$(".box").prepend(h3);
+
+			$("h1").appendTo(".box");
+			$("h3").appendTo(".box");
+			$("p").appendTo(".box");
+
+			$("h2").prependTo(".box");
+			$("img").prependTo(".box");
+			//= $(".box").prependTo("img");
+
+			$("h4").prependTo(".box");
+			/*
+			* $("부모").append("자식") -> 부모 안에 자식을 맨 뒤에 붙이기 
+			* $("부모").prepend("자식") -> 부모 안에 자식을 맨 앞에 붙이기 
+			* (이동하기)
+			*
+			* $("자식").appendTo("부모")
+			* $("자식").prependTo("부모")
+			*/
+		////////////////////////////////////////////////////
+	})
+	</script>
+	
+</head>
+<body>
+	<div class="box">
+		<h1>나는 제목1</h1>
+		<h2>나는 제목2</h2>
+		<h3>나는 제목3</h3>
+		<h4>나는 제목4</h4>
+		<p>나는 문단입니다.</p>
+		<img src="images/img0.png" alt="" />
+	</div>
+</body>
+</html>
+
+
+
+
+

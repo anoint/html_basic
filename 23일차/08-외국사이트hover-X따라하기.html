@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>
+		.box{ width: 400px; height: 300px; margin: 30px auto;
+			  position: relative;}
+		.box div{width: 100px; height: 100px; position: absolute; right: 0; bottom: -95px;}
+		.box div span{display: block; position: absolute;
+				  width: 100px; height: 10px;
+				  background: #000;
+				  transform: scale(1.4);
+				  left: 0; top: 0;
+				  transition:0.5s ease-in-out;}
+		.box div span:first-child{transform: rotate(45deg) scale(0)
+								  transition delay:0.2s;}
+		.box div span:last-child{transform: rotate(-45deg) scale(0)
+								  transition delay:0.6s;}
+		.box div:hover span{transform: scale(1);}
+		
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="images/1.jpg">
+		<span></span>
+		<span></span>
+	</div>	
+</body>
+</html>
+
+
+
+

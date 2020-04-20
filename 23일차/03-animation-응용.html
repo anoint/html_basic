@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>		
+		.box{ width: 100%; height: 250px;
+		background-repeat: none;
+		background-position: 0 0;
+		background-image: url(images/city.jpg);
+		animation: aniBg 20s linear infinite;
+		overflow: hidden;
+		position: relative;
+		}
+		.box img{position: absolute;}
+		.box img:first-child{
+			left: 300px; top: 115px;
+			animation: aniKingkong 2s ease-in-out infinite alternate 3s, firstani 3s ease-in-out 1, lastani 3s ease-in-out 10s;
+	/* 밖에서 한번 들어와서 왔다갔다 하는 움직임 줄거임 3s기다려 (중복애니 가능) */
+		}
+		.box img:last-child{
+			left: 100%; top: 80px;
+			animation: aniCoptor 15s linear infinite;
+		}
+		@keyframes aniBg{
+			0%{background-position: 0 0}
+			100%{background-position: -533px 0}
+		}
+		@keyframes aniKingkong{
+			0%{left: 300px; top: 115px;}
+			100%{left: 800px; top: 115px;}
+		}
+		@keyframes firstani{
+			0%{left: -1000px; opacity: 0}
+			100%{left: 100px; opacity: 1}
+		}
+		@keyframes lastani{
+			0%{left: 300px; top: 115px; opacity: 1;}
+			30%{transform: rotate(30deg); top: 170px; opacity: 1;}
+			70%{transform: rotate(-30deg); top: 200px;}
+			100%{transform: rotate(20deg); top: 300px; opacity: 0}
+		}
+		@keyframes aniCoptor{
+			0%{left: 100%; top: 80px;}
+			10%{left: 90%; top: 20px;}
+			20%{left: 80%; top: 80px;}
+			30%{left: 70%; top: 20px;}
+			40%{left: 60%; top: 90px;}
+			50%{left: 50%; top: 20px;}
+			60%{left: 50%; top: 90px;}
+			70%{left: 30%; top: 20px;}
+			80%{left: 20%; top: 80px;}
+			90%{left: 10%; top: 20px;}
+			100%{left: -10%; top: 90px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="images/KingKong.png" alt="킹콩">
+		<img src="images/coptor.png" alt="헬리콥터">
+	</div>
+</body>
+</html>
+
+
+
+

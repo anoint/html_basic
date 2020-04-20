@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	.bar{width: 100%; padding: 30px; background: #dcdcdc;}
+	.bar .inner{width: 1200px; margin: auto;}
+	.bar .inner h2{ float: left; padding-right: 20px;
+				    border-right: 1px solid #f00;
+					margin-right: 150px; }
+	.bar .inner .banner {float: left; width: 500px; height: 60px; 
+						 position: relative; overflow: hidden;}
+	.bar .inner .banner li{width: 500px; height: 150px; position: absolute; top: -150px;}
+	.bar .inner .banner li:first-child{top: 0;}
+	.bar .inner .banner li h3{font-size: 20px;}
+	.bar .inner .btn{float: right;}
+	.bar .inner .btn li{width: 20px; height: 20px; border: 1px solid #000; text-align: center;}
+	.bar .inner .btn li:last-child{margin-top: 5px;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var $next = $(".bar .inner .btn li").eq(1);
+		var $prev = $(".bar .inner .btn li").eq(0);
+		var $bannerli = $(".bar .inner .banner li");
+		var current = 0, old = 0;
+		var timer = 0, delay = 3000;
+		var size = $bannerli.length;
+
+		timer = setInterval(make,delay);
+		function make(){
+			current++;
+			if(current > size -1){current = 0}
+			banner(-150,150);
+			clearInterval(timer);
+			timer = setInterval(make,delay);
+		};
+		$next.click(function(){
+			current++;
+			if(current > size -1){current = 0}
+			banner(-150,150);
+			clearInterval(timer);
+			timer = setInterval(make,delay);
+		});
+		$prev.click(function(){
+			current--;
+			if(current < 0 ){current = size -1}
+			banner(150,-150);
+			clearInterval(timer);
+			timer = setInterval(make,delay);
+		});
+
+		function banner(num1, num2){
+			$bannerli.eq(current).stop().css({top:num1}).animate({top:0},400);
+			$bannerli.eq(old).stop().css({top:0}).animate({top:num2},400);
+			old = current;
+		};
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<!-- div.bar>.inner>h2>img^ul.banner>li*5>h3{엔진코팅제 직접 넣기가 이렇게 쉽습니다.}+span{2018.06.26}^^ul.btn>li*2 -->
+	<div class="bar">
+		<div class="inner cf">
+			<h2><img src="images/img_logo2.png" alt=""></h2>
+			<ul class="banner">
+				<li>
+					<h3>엔진코팅제 직접 넣기가 이렇게 쉽습니다.111</h3>
+					<span>2018.06.26</span>
+				</li>
+				<li>
+					<h3>엔진코팅제 직접 넣기가 이렇게 쉽습니다.222</h3>
+					<span>2018.06.26</span>
+				</li>
+				<li>
+					<h3>엔진코팅제 직접 넣기가 이렇게 쉽습니다.333</h3>
+					<span>2018.06.26</span>
+				</li>
+				<li>
+					<h3>엔진코팅제 직접 넣기가 이렇게 쉽습니다.444</h3>
+					<span>2018.06.26</span>
+				</li>
+				<li>
+					<h3>엔진코팅제 직접 넣기가 이렇게 쉽습니다.555</h3>
+					<span>2018.06.26</span>
+				</li>
+			</ul>
+			<ul class="btn">
+				<li>↑</li>
+				<li>↓</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+

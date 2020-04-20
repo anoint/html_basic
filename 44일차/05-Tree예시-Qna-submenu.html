@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	.box{width: 600px; height: 60px; background: green;}
+	.box1{width: 600px; height: 500px; background: yellow;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		$(".box1").hide();
+		$(".box").click(function(){
+			//$(".box1").slideDown();
+			$(this).next().slideDown();
+		});
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div class="box">제목1</div>
+	<div class="box1">내용</div>
+</body>
+</html>
+
+
+
+
+

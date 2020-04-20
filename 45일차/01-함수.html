@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+</style>
+<script>
+	$(function(){
+		/////////////
+		function sum(num1,num2,num3){
+			var num4 = num1 + num2 + num3;
+			return num4;
+		}
+		function sub(num1,num2){
+			var num3 = num1 - num2;
+			return num3;
+		}
+		function div(num1,num2){
+			var num3 = num1 / num2;
+			return num3;
+		}
+		function mat(num1,num2){
+			var num3 = num1 % num2;
+			return num3;
+		}
+		var a = sum(10, 20, 30);
+		document.write("합:"+ a +"<br/>");
+
+		var b = sub(100,50);
+		document.write("차:"+ b +"<br/>");
+
+		var c = div(100,50);
+		document.write("나누기:"+ c + "<br/>");
+
+		var d = mat(10,500);
+		document.write("나머지:"+ d + "<br/>");
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<pre>
+		1. function 함수명(){
+				실행문
+		}
+		2. function 
+
+		3. function 함수명(매개변수, 매개변수){
+			return 리턴값;
+		} 
+		
+		var 변수명 = 함수명 (값,값);
+	</pre>
+</body>
+</html>
+
+
+
+
+

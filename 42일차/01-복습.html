@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<style>
+</style>
+<script>
+	$(function(){
+		/////////////
+		/* 
+		var num = prompt("값을 입력하세요");
+		num = parseInt(num);
+		if( num % 3 == 0){
+			alert("3의배수");
+		} else {
+			alert("3의 배수가 아니다.");
+		}
+
+		var p = $("<p>").text("안녕하세요.");
+		var div = $("<div>").text("나는 div이다.");
+		var span = $("<span>").text("나는 span요소입니다.");
+
+		$("body").append(p,div,span);
+		p.css("opacity","0");
+		div.css("opacity","0");
+		span.css("opacity","0");
+		p.animate({opacity:1},1000,function(){ //function은 완료후로 해석됨(p애니 끝난후 div애니시작해라~)
+			//완료후 1초가 끝나고 나면
+			div.animate({opacity:1},2000,function(){
+				span.animate({opacity:1},3000,function(){
+					alert("종료되었습니다.");
+				});
+			});
+		})
+		*/
+		var ul =$("<ul>");
+		$("body").append(ul);
+		for(var i = 0; i <=10; i++){
+			var li = $("<li>").text("list"+i);
+			ul.append(li);
+			li.css("opacity","0").css("background","yellow").css("margin-bottom","10px").css("width","500px").css("hegiht","80px");
+			li.delay(i*100).animate({opacity:1},400);
+		}
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	
+</body>
+</html>
+
+
+
+
+

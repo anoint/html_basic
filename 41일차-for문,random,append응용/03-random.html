@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<style>
+	div{width: 300px; height: 100px; border: 1px solid #000;
+		font-size: 50px; text-indent: 20px; line-height: 2;
+		margin-bottom: 20px;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var ran = 0;
+		$("button").eq(0).click(function(){
+			ran = Math.random(); // 0~1사이의 실수 (0과 1은 절대 안나옴)
+			$("div").text(ran);
+		});
+		$("button").eq(1).click(function(){
+			ran = Math.random() * 5 ; // 범위까지의 사이 값이 생성됨 (= 0~1 * 범위)
+			$("div").text(ran);
+		});
+		$("button").eq(2).click(function(){
+			ran = Math.random() * 5 + 10;
+			//0.xx~0.9xx *5-0.xx~4.99xx + 10 => 10.xx~14.9xx
+			$("div").text(ran);
+		});
+		$("button").eq(3).click(function(){
+			ran = Math.random() * 10;
+			ran = Math.floor(ran); //소수점이하 버림
+			//Math.floor(3.9) ->3
+			$("div").text(ran);
+		});
+		$("button").eq(4).click(function(){
+			ran = Math.random() * 5;
+			ran = Math.ceil(ran); //소수점이하 올림
+			//Math.ceil(3.1)-> 4
+			$("div").text(ran);
+		});
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div></div>
+	<p>
+		<button>Math.random</button>
+		<button>Math.random*범위</button>
+		<button>Math.random*범위+시작</button>
+		<button>Math.floor</button>
+		<button>Math.ceil</button>
+	</p>
+</body>
+</html>
+
+
+
+
+

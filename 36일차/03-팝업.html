@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css"  />
+	<link rel="stylesheet" href="css/fonts.css"  />	
+	<script src="js/jquery.js"></script> 
+	<style>
+		button{padding: 20px; font-size: 16px;}
+		.popup{
+			position: absolute; left: 200px; top: 50px; 
+			width: 300px; height: 400px; border: 1px solid #000;
+		}
+		.popup a{display: block; width: 50px; height: 50px; 
+				 font-size: 50px; line-height: 1; text-align: center;
+				 color: #fff; background: #000;float: right;
+				 
+		}
+	</style>
+	<script>
+		$(function(){
+			/////////////////////////////////////
+			$(".popup a").click(function(){
+				$(".popup").css("display","none");
+			});
+			$("button").click(function(){
+				$(".popup").css("display","block");
+			});
+			////////////////////////////////////
+		})
+	</script>
+</head>
+<body>
+	<button>열기</button>
+	<div class="popup">
+		<a href="#">X</a>
+	</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>		
+		.banner{width: 500px; height: 180px; 
+			border: 1px solid #000; margin:200px auto;
+			position: relative;
+			ove rflow: hidden;}
+		.banner ul{}
+		.banner ul li{
+			position: absolute;
+			left: 0;						
+		}
+		.banner ul li:nth-child(1){
+			top: 0;
+			animation: banner1 12s linear infinite;
+		}
+		.banner ul li:nth-child(2){
+			top: -180px;
+			animation: banner2 12s linear infinite;
+		}
+		.banner ul li:nth-child(3){
+			top: -180px;
+			animation: banner3 12s linear infinite;
+		}
+		.banner ul li:nth-child(4){
+			top: -180px;
+			animation: banner4 12s linear infinite;
+		}
+		
+		
+		@keyframes banner1{
+			0%{top: 0;}			
+			20%{top: 0;}			
+			25%{top:180px}			
+			50%{top:-180px}			
+			75%{top:-180px}			
+			100%{}
+		}
+		@keyframes banner2{
+			0%{top:-180px}			
+			20%{top:-180px}			
+			25%{top:0}			
+			50%{top:180px}			
+			75%{top:-180px}			
+			100%{}
+		}
+		@keyframes banner3{
+			0%{top:-180px}			
+			20%{top:-180px}			
+			25%{top:-180px}			
+			50%{top:0px}			
+			75%{top:180px}			
+			100%{}
+		}
+		@keyframes banner4{
+			0%{top:-180px}			
+			20%{top:-180px}			
+			25%{top:-180px}			
+			50%{top:-180px}			
+			75%{top:0px}			
+			100%{}
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<ul>
+			<li><img src="images/ba1.jpg" alt="" /></li>
+			<li><img src="images/ba2.jpg" alt="" /></li>
+			<li><img src="images/ba3.jpg" alt="" /></li>
+			<li><img src="images/ba4.jpg" alt="" /></li>
+		</ul>
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

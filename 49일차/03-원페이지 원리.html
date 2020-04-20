@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	#wrap{width: 100%; min-width: 1500px;}
+	#header{width: 100%;}
+	#header .inner-1180{width: 1180px; height: 150px; margin: auto; position: relative;}
+	#header h1{position: absolute; left: 0; top: 50px;}
+	#nav{position: absolute; right: 0; top: 65px;}
+	#gnb{}
+	#gnb li{float: left; margin-left: 80px; }
+	#gnb li a{font-size: 20px; display: block; padding: 5px;}
+
+	#container{height: 100px;}
+	#container:after{content:''; display: block; clear: both;}
+	.box{width: 100%;}
+	.box .inner{width: 1180px; height: 800px; margin: auto; position: relative;}
+	.box .inner h2{font-size: 40px; padding-top: 80px; text-align: center;}
+	#content1{background: #C5CAE9}
+	#content2{background: #B39DDB}
+	#content3{background: #BBDEFB}
+	#content4{background: #81D4FA}
+	#content5{background: #4FC3F7}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var arr = []
+		for(var i = 0; i < 5; i++){
+			arr[i] = $(".box").eq(i).offset().top;
+		}
+		/* 위 방법과 동일한 효과
+		var ty0 = $("#content1").offset().top;
+		var ty1 = $("#content2").offset().top;
+		var ty2 = $("#content3").offset().top;
+		var ty3 = $("#content4").offset().top;
+		var ty4 = $("#content5").offset().top; 
+		*/
+		var cnt = 0;
+		$("#gnb li").click(function(){
+			cnt = $(this).index();
+			var ty = $(".box").eq(cnt).offset().top;
+			//var ty = $("#content"+(cnt+1)).offset().top;
+			$("html.body").animate({scrollTop: arr[cnt]},800);
+		});
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<!-- #wrap>header#header>(h1>a[href=#]>img)+(nav#nav>ul#gnb>li*5>a[href=#]{MainMenu$})^div#container>section#content -->
+	<div id="wrap">
+		<header id="header">
+			<div class="inner-1180">
+				<h1><a href="#"><img src="http://placehold.it/100x50" alt=""></a></h1>
+				<nav id="nav">
+					<ul id="gnb">
+						<li><a href="#content1">MainMenu1</a></li>
+						<li><a href="#content2">MainMenu2</a></li>
+						<li><a href="#content3">MainMenu3</a></li>
+						<li><a href="#content4">MainMenu4</a></li>
+						<li><a href="#content5">MainMenu5</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!--    //header    -->
+		<div id="container">
+			<section id="content1" class="box">
+				<div class="inner"><h2>타이틀1</h2></div>
+			</section>
+			<section id="content2" class="box">
+				<div class="inner"><h2>타이틀2</h2></div>
+			</section>
+			<section id="content3" class="box">
+				<div class="inner"><h2>타이틀3</h2></div>
+			</section>
+			<section id="content4" class="box">
+				<div class="inner"><h2>타이틀4</h2></div>
+			</section>
+			<section id="content5" class="box">
+				<div class="inner"><h2>타이틀5</h2></div>
+			</section>
+		</div>
+		<!--   //container   -->
+	</div>
+</body>
+</html>
+
+
+
+
+

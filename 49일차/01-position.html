@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	div{width: 1200px; height: 800px; margin: auto; }
+	div p{font-size: 100px; padding-top: 50px;}
+	div:nth-child(1){background: #90CAF9}
+	div:nth-child(2){background: #B39DDB}
+	div:nth-child(3){background: #C5CAE9}
+	div:nth-child(4){background: #81D4FA}
+	div:nth-child(5){background: #80DEEA}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var top0 = $("div").eq(0).position().top;
+		//$(".box").eq(0).children("p")
+		//$(".box").eq(0).find("p")
+		//var left0 = $("div").eq(0).position().left
+		$(".box:eq(0) p").text(top0);
+		var top1 = $("div").eq(1).position().top;
+		$(".box:eq(1) p").text(top1);
+		var top2 = $("div").eq(2).position().top;
+		$(".box").eq(2).children("p").text(top2);
+		var top3 = $("div").eq(3).position().top;
+		$(".box").eq(3).children("p").text(top3);
+		var top4 = $("div").eq(4).position().top;
+		$(".box:eq(4) p").text(top4);
+
+		$("html,body").animate({scrollTop:top3},1000) //브라우저 성격이 있어서 html,body둘다 작성해줘야함
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div class="box"><p>?????</p></div>
+	<div class="box"><p>?????</p></div>
+	<div class="box"><p>?????</p></div>
+	<div class="box"><p>?????</p></div>
+	<div class="box"><p>?????</p></div>
+</body>
+</html>
+
+
+
+
+

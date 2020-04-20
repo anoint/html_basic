@@ -1,0 +1,10 @@
+@font-face {
+    font-family: '폰트명';
+    src: url('폰트.eot');
+    src: url('폰트.eot?#iefix') format('embedded-opentype'),
+	 url('폰트.woff') format('woff'),
+	 url('폰트.ttf') format('truetype'),
+	 url('폰트.svg#DigitaldreamFatRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

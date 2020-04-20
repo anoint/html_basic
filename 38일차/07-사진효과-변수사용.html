@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제이쿼리</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="js/jquery.js"></script>
+	<style>
+		div{width: 1000px; height: 576px; border: 1px solid #000;}
+		p{font-size: 30px;}
+	</style>
+	<script>
+		$(function(){
+		////////////////////////////////////////////////////
+			var count = 0, imgUrl="", img="";
+			var $img = $("div img");
+			var $div = $("div");
+			var $p = $("p")
+
+			img = $img.attr("src");
+			$p.text(img);
+			//처음 시작 때 p에 ???가 아닌 이미지 주소값이 나오도록
+
+			$div.click(function(){
+				count++ ;
+				if (count > 7){
+					count = 0;
+				} //롤링 0~7 다시 0부터 롤링
+
+				imgUrl = "images/img"+count+".png";
+				$img.attr("src", imgUrl).hide().fadeIn();
+				//사진이 0부터 증가하면서 보여주기
+
+				img = $img.attr("src");
+				//p에는 사진의 주소를 이미지에서 뽑아서 출력해라.
+				$p.text(img);
+			});
+		////////////////////////////////////////////////////
+	})
+	</script>
+	
+</head>
+<body>
+	<div>
+		<img src="images/img0.png" alt="">
+	</div>
+	<p>???????</p>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<!-- meta:vp -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" href="css/reset.css" />
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<style>		
+		ul{}
+		ul li{width: 600px; height: 50px; border: 1px solid #000;
+			  margin-bottom: 5px;}
+
+	</style>
+	<script>
+		$(function(){
+			// jQuery("경로").메서드("속성","값");
+			// = $("경로").메서드("속성","값");
+			$("ul li:first-child").css("background","green");
+			$("ul li:nth-child(2)").css("background", "blue");
+			$("ul li:nth-child(3)").css("background","yellow");
+			$("ul li:nth-child(4)").css("background","skyblue");
+			$("ul li:nth-child(5)").css("background","red");
+			$("ul li:nth-child(6)").css("background","coral");
+			$("ul li:nth-child(7)").css("background","pink");
+			$("ul li:nth-child(8)").css("background","aqua");
+			$("ul li:nth-child(9)").css("background","violet");
+			$("ul li:last-child").css("background","purple");
+
+		})
+		// 앞은 속성 뒤에는 값이 옴
+	</script>
+</head>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	
+</body>
+</html>
+
+
+
+

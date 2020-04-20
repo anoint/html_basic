@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>
+		.text-box{ width: 1000px; height: 80px; 
+			border-bottom: 2px solid #000;
+		position: relative; margin: 50px auto; 
+		}
+		.text-box span{
+			position: relative; float: left;
+			font-size: 70px; line-height: 80px;
+			text-transform: uppercase; /* 대문자로 바꾸기 */
+			font-weight: bold;
+			color: #b2ebf2;
+			animation: aniColor 9s linear infinite alternate;
+		}
+		.text-box span:nth-child(1){animation-delay: 0s;}
+		.text-box span:nth-child(2){animation-delay: 1s;}
+		.text-box span:nth-child(3){animation-delay: 2s;}
+		.text-box span:nth-child(4){animation-delay: 3s;}
+		.text-box span:nth-child(5){animation-delay: 4s;}
+		.text-box span:nth-child(6){animation-delay: 5s;}
+		.text-box span:nth-child(7){animation-delay: 6s;}
+		.text-box span:nth-child(8){animation-delay: 7s;}
+		.text-box span:nth-child(9){animation-delay: 8s;}
+
+		@keyframes aniColor{
+			0%{color: #FCE4EC}
+			10%{color:#F8BBD0}
+			20%{color:#F48FB1}
+			30%{color:#F06292}
+			40%{color:#EC407A}
+			50%{color:#03A9F4}
+			60%{color:#29B6F6}
+			70%{color:#4FC3F7}
+			80%{color:#81D4FA}
+			90%{color:#B3E5FC}
+			100%{color:#E1F5FE}
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="text-box">
+		<span>P</span>
+		<span>o</span>
+		<span>r</span>
+		<span>t</span>
+		<span>f</span>
+		<span>o</span>
+		<span>l</span>
+		<span>i</span>
+		<span>o</span>
+	</div>
+</body>
+</html>
+
+
+
+

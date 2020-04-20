@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="js/jquery.js"></script>
+	<style>
+		
+	</style>
+	<script>
+		$(function(){
+		////////////////////////////////////////////////////
+			var kor = prompt("국어점수를 입력하세요.");
+			var mat = prompt("수학점수를 입력하세요.");
+			var eng = prompt("영어점수를 입력하세요.");
+			kor = parseInt(kor);
+			mat = parseInt(mat);
+			eng = parseInt(eng);
+			var sum = kor + mat + eng;
+			//console.log( sum ) //F12로 console에서 중간 값 체크할 때 많이 사용
+			var avg = sum/3; //평균구하기
+			console.log( avg );
+			//90이상 A학점, 80이상 B학점, 70이상 C학점, 60이상 D학점, 그 외 F
+			if(avg >= 90){
+				alert("A학점");
+			} else if(avg >= 80){
+				alert("B학점");
+			} else if(avg >= 70){
+				alert("C학점");
+			} else if (avg >=60){
+				alert("D학점");
+			} else {
+				alert("F학점");
+			}
+		////////////////////////////////////////////////////
+	})
+	</script>
+	
+</head>
+<body>
+	
+</body>
+</html>
+
+
+
+
+

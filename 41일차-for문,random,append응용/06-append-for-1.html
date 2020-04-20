@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<style>
+	ul{margin: 50px;}
+	ul li{width: 350px; height: 60px; margin-bottom: 10px; border: 1px solid #000;
+		  font-size: 20px; line-height: 3; text-indent: 20px; cursor: pointer;
+		  position: relative; /* <-이걸 넣어야 아래에서 .css(position)효과 줄 수 있음 */}
+
+</style>
+<script>
+	$(function(){
+		/////////////
+		//10개 생성해서 출력
+		for(var i = 0; i < 10; i++){
+			var li = $("<li>").text("text"+i);
+			$("ul").append(li);
+			li.css("opacity","0").css("left","-400px");
+			li.delay(i*150).animate({opacity:1,left:0},300);
+		}
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<ul>
+		<!-- li를 생성해서 출력하기 -->
+	</ul>
+</body>
+</html>
+
+
+
+
+

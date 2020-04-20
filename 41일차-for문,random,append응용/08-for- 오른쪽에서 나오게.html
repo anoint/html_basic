@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<style>
+	ul{margin: 50px;}
+	ul li{width: 350px; height: 60px; margin-bottom: 10px; border: 1px solid #000;
+		  font-size: 20px; line-height: 3; text-indent: 20px; cursor: pointer; background: coral; 
+		  position: relative;}
+
+</style>
+<script>
+	$(function(){
+		/////////////
+		/*
+		$("ul li").css("opacity","0");
+		$("ul li").eq(0).animate({opacity:1},400);
+		$("ul li").eq(1).delay(300).animate({opacity:1},400);
+		$("ul li").eq(2).delay(600).animate({opacity:1},400);
+		$("ul li").eq(3).delay(900).animate({opacity:1},400);
+		$("ul li").eq(4).delay(1200).animate({opacity:1},400);
+		$("ul li").eq(5).delay(1500).animate({opacity:1},400);
+		$("ul li").eq(6).delay(1800).animate({opacity:1},400);
+		$("ul li").eq(7).delay(2100).animate({opacity:1},400);
+		$("ul li").eq(8).delay(2400).animate({opacity:1},400);
+		$("ul li").eq(9).delay(2700).animate({opacity:1},400);
+		*/
+		$("ul li").css("opacity","0").css("right","-100%");
+
+		for(var i = 0 ; i <= 9; i++){
+			$("ul li").eq(i).delay(i*200).animate({opacity:1,right:0},400);
+		}
+		
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<ul>
+		<li>test</li>
+		<li>test</li>
+		<li>test</li>
+		<li>test</li>
+		<li>test</li>
+		<li>test</li>
+		<li>test</li>
+		<li>test</li>
+		<li>test</li>
+		<li>test</li>
+	</ul>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="js/jquery.js"></script>
+	<style>
+		.txt{border: 1px solid #000; padding: 20px; font-size: 16px; line-height: 1.8;}
+		button{padding: 10px; font-size: 16px;}
+	</style>
+	<script>
+		$(function(){
+		////////////////////////////////////////////////////
+			var size = $(".txt").css("font-size"); //txt의 폰트 크기를 꺼내오기
+			size = parseInt(size);
+			alert(size+"px");
+			$("button").eq(0).click(function(){
+				if(size > 12){
+					size--;
+					$(".txt").css("font-size",size);
+					console.log(size); //F12 ->console
+				}
+			});
+			$("button").eq(1).click(function(){
+				if(size < 20){
+					size ++; //size값을 1 증가, 
+					$(".txt").css("font-size", size); //txt의 폰트 크기를 size값에 넣기
+					console.log(size);
+				}
+			});
+			/* $("button").eq(0).click(function(){
+				size--;
+				if(size < 12){
+					size = 12;
+				}
+				$(".txt").css("font-size",size);
+			});
+			$("button").eq(1).click(function(){
+				size ++; //size값을 1 증가, 
+				if(size > 20){
+					size = 20;
+				}
+				$(".txt").css("font-size", size); //txt의 폰트 크기를 size값에 넣기
+			}); */
+				
+		////////////////////////////////////////////////////
+	})
+	</script>
+	
+</head>
+<body>
+	<div class="txt">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur explicabo esse alias adipisci accusantium illum architecto molestiae harum aperiam sint, magni, qui earum dolore atque cupiditate dolorem error reprehenderit, tempore.
+	</div>
+	<p>
+		<button> 폰트크기감소 </button>
+		<button> 폰트크기증가 </button>
+	</p>
+</body>
+</html>
+
+
+
+
+

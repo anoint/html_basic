@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>		
+		/* #wrap{width: 100%; height: 100%; margin: auto;
+		 	  position: fixed; left: 0; top: 0;}
+		 	  이렇게 작성하면 전체화면 가득히해서 볼 수 있음*/
+		#wrap{width: 100%; height: 100%; margin: auto;
+		 	  position: fixed; left: 0; top: 0;}
+		#wrap:after{content:''; display: block;
+					width: 100%; height: 100%;
+					position: absolute; left: 0; top: 0;
+					background-repeat: repeat;
+					background-position: 0 0;
+					background-image: url(images/pattern1.png);
+					opacity: 0.5;}
+		#wrap ul{}
+		#wrap ul li{ width: 100%; height: 100%;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: cover; opacity: 0;
+			position: absolute; left: 0; top: 0;
+			animation: aniBanner 15s ease-in-out infinite;
+		}
+		@keyframes aniBanner{
+			0%{opacity: 0;}
+			20%{opacity: 1;}
+			25%{opacity: 0;}
+			100%{opacity: 0;}
+		}
+		#wrap ul li:nth-child(1){background-image: url(images/img1.png); animation-delay: 0s;}
+		#wrap ul li:nth-child(2){background-image: url(images/img2.png);animation-delay: 3s;}
+		#wrap ul li:nth-child(3){background-image: url(images/img3.png);animation-delay: 6s;}
+		#wrap ul li:nth-child(4){background-image: url(images/img4.png);animation-delay: 9s;}
+		#wrap ul li:nth-child(5){background-image: url(images/img5.png);animation-delay: 12s;}
+
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<ul class="banner">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+

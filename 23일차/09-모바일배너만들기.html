@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>		
+		.banner{width: 500px; height: 180px; margin: 200px auto; border: 1px solid #000; position: relative; overflow: hidden;}
+		.banner ul{}
+		.banner ul li{position: absolute; left: 0;
+					  }
+		.banner ul li:first-child{top: 0;
+					animation: banner1 6s linear infinite;}
+		.banner ul li:last-child{top: -180px;
+					animation: banner2 6s linear infinite;}
+		@keyframes banner1{
+			0%{top: 0;}
+			45%{top:0;}
+			50%{top: 180px;}
+			51%{top: -180px;}
+			95%{top: -180px;}
+			100%{top:0;}
+		}
+		@keyframes banner2{
+			0%{top: -180px;}
+			45%{top: -180px;}
+			50%{top: 0;}
+			51%{top: 0;}
+			95%{top: 0;}
+			100%{top: 180px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<ul>
+			<li><img src="images/ba1.jpg" alt=""></li>
+			<li><img src="images/ba2.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+

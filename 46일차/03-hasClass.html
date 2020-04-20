@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	button{ padding: 20px; font-size: 20px; border: none;}
+	button.on{ color: pink;}
+	.site-map{ position: absolute; left: 50%; top: -550px; margin-left: -500px;
+			   width: 1000px; height: 500px; background: #dcdcdc;}
+	.site-map h2{font-size: 50px; padding: 30px;}
+	.site-map .nav{padding: 0 30px;}
+	.site-map .nav li{}
+	.site-map .nav li a{font-size: 16px;}
+	}
+
+</style>
+<script>
+	$(function(){
+		/////////////
+		var isPlay = $("button").hasClass("on"); //on이 붙어있는지 떨어져있는지 확인
+		console.log(isPlay);
+
+		$("button").click(function(){
+			if(!isPlay){
+				$(".site-map").animate({top:"50%",marginTop:-250},600);
+				$("button").addClass("on");
+			} else{
+				$(".site-map").animate({top: -800},300);
+				$("button").removeClass("on");
+			} 
+			isPlay = $("button").hasClass("on");
+		});
+		/*
+		var isPlay = false;
+		$("button").click(function(){
+			if(!isPlay){
+				$(".site-map").animate({top:"50%",marginTop:-250},600);
+			}else{
+				$(".site-map").animate({top: -800},300);
+			}
+			isPlay = !isPlay;
+		});
+		*/
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<button>전체 메뉴 보기</button>
+	<div class="site-map">
+		<h2>사이트 맵</h2>
+		<ul class="nav">
+			<li><a href="#">MainMenu</a></li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+

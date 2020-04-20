@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	div{width: 600px; height: 100px; font-size: 25px; line-height: 4;text-indent: 20px; border: 1px solid #000;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var timer = 0 , delay = 1000;
+		var msg = "";
+		make();
+		timer = setInterval(make, delay);
+		function make(){
+			var now = new Date();
+			var h = now.getHours();
+			var m = now.getMinutes();
+			var s = now.getSeconds();
+
+			if( h < 12 ){
+				if(h < 10){
+				h = "0" + h;
+			}
+				h ="AM" + h;
+			}else{
+				h = h - 12;
+				h ="PM" + h;
+			}
+			
+			if( m < 10){
+				m = "0" + m;
+			}
+			if(s < 10){
+				s = "0" + s;
+			}
+			msg = h +":"+m+":"+s;
+			$("div").text(msg);
+		}
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div></div>
+</body>
+</html>
+
+
+
+
+

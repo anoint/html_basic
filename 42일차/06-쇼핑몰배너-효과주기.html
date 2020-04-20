@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<style>
+	.banner{width: 870px; height: 398px; margin: auto;
+			border: 1px solid #000;}
+	.banner ul{width: 2320px; position: relative;}
+	.banner ul li{float: left;}
+</style>
+<script>
+	$(function(){
+		///////////////////////////////////////////////////////////
+		$(".banner").css("overflow","hidden");
+		var last ="", first = "";
+		last = $(".banner ul li").last();
+		$(".banner ul").prepend(last);
+		$(".banner ul").css("margin-left","-=290");
+
+		$(".prev").click(function(){
+			$(".banner ul").animate({marginLeft:"-=290"},400,function(){
+				first = $(".banner ul li").first();
+				$(".banner ul").append(first);
+				$(".banner ul").css("margin-left","+=290");
+			});
+		});
+
+		$(".next").click(function(){
+			$(".banner ul").animate({marginLeft:"+=290"},400,function(){
+				last = $(".banner ul li").last();
+				$(".banner ul").prepend(last);
+				$(".banner ul").css("margin-left","-=290");
+			});
+		});
+		//////////////////////////////////////////////////////////
+	});
+</script>
+	
+</head>
+<body>
+	<!-- .banner>ul>li*8>img[src=img/$] -->
+	<p>
+		<button class="prev">이전</button>
+		<button class="next">다음</button>
+	</p>
+	<div class="banner">
+		<ul class="cf">
+			<li><img src="img/0.gif" alt=""></li>
+			<li><img src="img/1.gif" alt=""></li>
+			<li><img src="img/2.jpg" alt=""></li>
+			<li><img src="img/3.jpg" alt=""></li>
+			<li><img src="img/4.gif" alt=""></li>
+			<li><img src="img/4.jpg" alt=""></li>
+			<li><img src="img/5.jpg" alt=""></li>
+			<li><img src="img/6.jpg" alt=""></li>
+			
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+

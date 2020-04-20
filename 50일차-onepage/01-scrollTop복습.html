@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	h1{ width: 300px; height: 100px; 
+		font-size: 40px; line-height: 100px; text-align: center; border: 1px solid #000; 
+	 	position: fixed; left: 50px; top: 50px; z-index: 100;}
+	h1.on{background: yellow; width: 400px;}
+	div{width: 100%; height: 3000px; background: skyblue;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var top = 0;
+		//1. 위치가 200이 넘으면 h1에 클래스 붙이기
+		//2. 그렇지 않으면 클래스 떼라
+		$(window).scroll(function(){
+			top = $(window).scrollTop();
+			$("h1").text(top);
+			if (top > 200){
+				$("h1").addClass("on");
+			}else{
+				$("h1").removeClass("on");
+			}
+		})
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<h1>???</h1>
+	<div></div>
+</body>
+</html>
+
+
+
+
+

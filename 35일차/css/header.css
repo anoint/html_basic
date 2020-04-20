@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+#wrap{width: 100%; min-width:1500px}
+#header{width: 100%; background-repeat: repeat-x;
+		background-position: 0 0;
+background-image: url(../images/common/header/header_bg.jpg);}
+#header .inner-1180{width: 1180px;margin: auto; height: 140px;
+					position: relative;}
+#header h1{position: absolute; left: 0; top: 10px;}
+#header .top-menu{position: absolute; right: 0;top: 10px;}
+#header .top-menu dt{}
+#header .top-menu dd{float: left; margin-left: 10px;}
+#header .top-menu dd a{font-size: 12px;}
+#nav{position: absolute; right: 0; top: 60px;}
+#gnb{}
+#gnb li{float: left; margin-left: 70px;}
+#gnb li a{font-size: 20px; color:#fff; transition:0.3s;
+		font-family: 'Abel', sans-serif; 
+		font-weight: bold;}
+#gnb li:hover a{color:skyblue;}
+
+#container{height: 100%;}
+#container:after{content: "";display: block;clear: both;}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>원페이지 구조 -100% 구조</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>		
+		#wrap{width: 100%; /* min-width: 1600px 그밑으로 내려가면 픽셀화 시켜라*/}
+		#header{width: 100%; background: #FFB74D;}
+		#header .inner-1200{width: 1200px;height: 150px; margin: auto;
+							background: #FFEA00;}
+		#container{height: 100%;}
+		#container:after{content: ''; display: block; clear: both;}
+		#content{}
+		.con-box{width: 100%;}
+		.con-box .inner{width: 1200px; height: 700px; margin: auto;
+						background: #FF6F00;}
+		.section1{background: #FFCC80;}
+		.section1 .inner{background: yellow;}
+		.section2{background: #FFE0B2;}
+		.section2 .inner{background: green;}
+		.section3{background: #FFE082;}
+		.section3 .inner{background: skyblue;}
+		.section4{background: #FFECB3;}
+		.section4 .inner{background: coral;}
+		.section5{background: #FF9800;}
+		.section5 .inner{background: pink;}
+	</style>
+</head>
+<body>
+	<!-- div#wrap>div#header>div.inner-1200^div#visual>div.inner-1200^div#container>div#content>div.con-box.section$*5>div.inner>h2{title} -->
+	<div id="wrap">
+		<div id="header">
+			<div class="inner-1200"></div>
+		</div>
+		</div>
+		<div id="container">
+			<div id="content">
+				<div class="con-box section1">
+					<div class="inner">
+						<h2>title</h2>
+					</div>
+				</div>
+				<div class="con-box section2">
+					<div class="inner">
+						<h2>title</h2>
+					</div>
+				</div>
+				<div class="con-box section3">
+					<div class="inner">
+						<h2>title</h2>
+					</div>
+				</div>
+				<div class="con-box section4">
+					<div class="inner">
+						<h2>title</h2>
+					</div>
+				</div>
+				<div class="con-box section5">
+					<div class="inner">
+						<h2>title</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<address>서울시 구로구..</address>
+		</div>
+	</div>
+	
+</body>
+</html>
+
+
+
+

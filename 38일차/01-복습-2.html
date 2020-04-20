@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>메인페이지3</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="js/jquery.js"></script>
+	<style>
+		ul{}
+		ul li{width: 600px; height: 60px; margin-bottom: 5px;
+			  border: 1px solid #000; font-size: 20px;
+			  line-height: 3; text-indent: 15px;}
+	</style>
+	<script>
+		$(function(){
+		////////////////////////////////////////////////////
+			var bgColor = "";
+			$("ul li").eq(0).click(function(){
+				bgColor = $(this).text();
+				$(this).css("background", bgColor);
+		});
+			$("ul li").eq(1).click(function(){
+				bgColor = $(this).text();
+				$(this).css("background", bgColor);
+			});
+			$("ul li").eq(2).click(function(){
+				bgColor = $(this).text();
+				$(this).css("background", bgColor);
+			});
+			$("ul li").eq(3).click(function(){
+				bgColor = $(this).text();
+				$(this).css("background", bgColor);
+			});
+			$("ul li").eq(4).click(function(){
+				bgColor = $(this).text();
+				$(this).css("background", bgColor);
+			});
+			$("ul li").eq(5).click(function(){
+				bgColor = $(this).text();
+				$(this).css("background", bgColor);
+			});
+		////////////////////////////////////////////////////
+	})
+	</script>
+</head>
+<body>
+	<ul>
+		<li>red</li>
+		<li>green</li>
+		<li>blue</li>
+		<li>pink</li>
+		<li>lime</li>
+		<li>skyblue</li>
+	</ul>
+</body>
+</html>
+
+
+
+
+

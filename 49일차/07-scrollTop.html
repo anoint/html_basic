@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	h1{ border: 1px solid #000; width: 300px; height: 80px; 
+		font-size: 40px; text-align: center; line-height: 2;
+	    position: fixed; left: 50px; top: 50px;
+	    z-index: 100; background: #fff;}
+	div{width: 100%; height: 4000px; background: green;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var top = 0;
+		$(window).scroll(function(){
+			top = $(window).scrollTop() //스크롤의 좌표값
+			$("h1").text(top);
+		})
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<h1>???</h1>
+	<div></div>
+</body>
+</html>
+
+
+
+
+

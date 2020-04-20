@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="js/jquery.js"></script>
+	<style>
+		#visual{width: 1100px; margin: auto;}
+		#visual .list{float: left;}
+		#visual .list li{width: 200px; height: 50px; line-height: 50px;
+						background-repeat: no-repeat; border-bottom: 1px solid #dcdcdc;
+						cursor: pointer;}
+		#visual .list li:last-child{border-bottom: none;}
+		#visual .con-left li{background-position: 100% 50%;
+							 background-image: url(jquery3/img/good_icon1.gif);
+							 }
+		#visual .con-left li.on{
+						background-image: url(jquery3/img/good_icon2.gif);
+						background-color: #5d6373; color: #fff;
+		}
+		#visual .con-right li{
+						background-position: 0 50%;
+						background-image: url(jquery3/img/good_icon3.gif);
+						text-align: right;
+		}
+		#visual .con-right li.on{
+						background-image: url(jquery3/img/good_icon4.gif);
+						background-color: #5d6373; color: #fff;
+		}
+
+		#visual div{float: left; width: 700px;}
+	</style>
+	<script>
+		$(function(){
+		////////////////////////////////////////////////////
+			//li의 0번을 누르면-> img0->fade 효과 넣어서 만들기
+			//해당 li의 클래스 on 붙이고 나머지 li는 클래스 떼기
+			$("#visual .list li").eq(1).click(function(){
+				$("div img").attr("src", "jquery3/img/img1.jpg").hide().fadeIn();
+				$("#visual .list li").removeClass("on");
+				$(this).addClass("on");
+			});
+		////////////////////////////////////////////////////
+	})
+	</script>
+	
+</head>
+<body>
+	<section id="visual" class="cf">
+		<ul class="con-left list">
+			<li class="on">식수처럼 매일 마시는 차</li>
+			<li>식수처럼 매일 마시는 차</li>
+			<li>식수처럼 매일 마시는 차</li>
+			<li>식수처럼 매일 마시는 차</li>
+			<li>식수처럼 매일 마시는 차</li>
+			<li>식수처럼 매일 마시는 차</li>
+		</ul>
+		<div><img src="jquery3/img/img0.jpg" alt=""></div>
+		<ul class="con-right list">
+			<li class="on">식수처럼 매일 마시는 차</li>
+			<li>식수처럼 매일 마시는 차</li>
+			<li>식수처럼 매일 마시는 차</li>
+			<li>식수처럼 매일 마시는 차</li>
+			<li>식수처럼 매일 마시는 차</li>
+			<li>식수처럼 매일 마시는 차</li>
+		</ul>
+	</section>
+</body>
+</html>
+
+
+
+
+

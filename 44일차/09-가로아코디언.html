@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	.acc{width: 1000px; margin: auto; border: 1px solid #000;}
+	.acc dt{width: 40px; height: 350px;
+			background: #333; color: #fff;
+			float: left; border: 1px solid #dcdcdc;}
+	.acc dd{ width: 300px; height: 350px; float: left; 
+			 background: #336699; color: #fff;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		//1. dd 모두 숨기기,첫번째만 보이기
+		//2. dt를 누르면 해당 dd만 보이게 (show,hide사용), 나머지 dd는 숨기기
+		
+		$(".acc dd").width(0).first().width(300);
+		$(".acc dt").click(function(){
+			$(".acc dd").animate({width:0},400);
+			$(this).next().animate({width:300},400);
+		});
+		
+		/*
+		$(".acc dd").width(0).first().width(300);
+		$(".acc dt").click(function(){
+			$(".acc dd").width(0);
+			$(this).next().width(300);
+		});
+		*/
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<!-- dl.acc>(dt{제목$}+dd{설명$})*5 -->
+	<dl class="acc">
+		<dt>제목1</dt>
+		<dd>설명1</dd>
+		<dt>제목2</dt>
+		<dd>설명2</dd>
+		<dt>제목3</dt>
+		<dd>설명3</dd>
+		<dt>제목4</dt>
+		<dd>설명4</dd>
+		<dt>제목5</dt>
+		<dd>설명5</dd>
+	</dl>
+</body>
+</html>
+
+
+
+
+

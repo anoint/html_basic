@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	.box{width: 600px; height: 100px; border: 1px solid #000;
+		 margin-left: 20px; text-indent: 20px; font-size: 50px; line-height: 2;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		$("button").eq(0).click(function(){
+			window.open("http://www.naver.com");
+			//새창띄우기
+		});
+		$("button").eq(1).click(function(){
+			window.open("http://www.nate.com");
+		});
+		$("button").eq(2).click(function(){
+			window.open("http://www.google.com");
+		});
+		$("button").eq(3).click(function(){
+			location.href="http://www.daum.net";
+			//현재페이지에서 이동
+		});
+		$("button").eq(4).click(function(){
+			$(".box").text("http://www.tjoeun.co.kr");
+			window.open("http://www.tjoeun.co.kr");
+		});
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div class="box"></div>
+	<p>
+		<button>네이버</button>
+		<button>네이트</button>
+		<button>구글</button>
+		<button>다음</button>
+		<button>더조은</button>
+	</p>
+</body>
+</html>
+
+
+
+
+

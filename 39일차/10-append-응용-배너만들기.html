@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="js/jquery.js"></script>
+	<style>
+		p{margin-left: 50px;}
+		button{font-size: 30px; padding: 10px;}
+		.banner{width: 1000px; height: 144px; margin: auto; border: 1px solid #000; overflow: hidden;}
+		.banner ul{width: 2000px;}
+		.banner ul li{float: left;}
+		.banner ul li img{width: 250px;}
+	</style>
+	<script>
+		$(function(){
+		////////////////////////////////////////////////////
+			var first=""; last="";
+			$(".prev").click(function(){
+				//li맨 뒤를 떼어서 맨앞에 붙이기
+				last = $(".banner ul li").last();
+				$(".banner ul").prepend(last);
+			});
+			$(".next").click(function(){
+				//li맨 앞을 떼어서 맨뒤에 붙이기
+				first = $(".banner ul li:first");
+				$(".banner ul").append(first);
+			});
+		////////////////////////////////////////////////////
+	})
+	</script>
+	
+</head>
+<body>
+	<p>
+		<button class="prev">&lt;</button>
+		<button class="next">&gt;</button>
+	</p>
+	<div class="banner cf">
+		<!-- ul>li*8>img[src=images/img$.png] -->
+		<ul>
+			<li><img src="images/img0.png" alt=""></li>
+			<li><img src="images/img1.png" alt=""></li>
+			<li><img src="images/img2.png" alt=""></li>
+			<li><img src="images/img3.png" alt=""></li>
+			<li><img src="images/img4.png" alt=""></li>
+			<li><img src="images/img5.png" alt=""></li>
+			<li><img src="images/img6.png" alt=""></li>
+			<li><img src="images/img7.png" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+

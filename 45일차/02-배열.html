@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+</style>
+<script>
+	$(function(){
+		/////////////
+		var arr = [];
+		arr[0] = "홍길동";
+		arr[1] = 20;
+		arr[2] = "서울시 구로구 구로동";
+		arr[3] = "여자";
+
+		for(var i = 0; i < 4 ; i++){
+			document.write(arr[i]+"<br>");
+		}
+
+		/*
+		document.write("이름: "+arr[0]+"<br>");
+		document.write("나이: "+arr[1]+"<br>");
+		document.write("주소: "+arr[2]+"<br>");
+		document.write("성별: "+arr[3]+"<br>");
+		*/
+		////////////
+	});
+</script>
+	
+</head>
+<body>
+	<pre>
+		배열 : 값을 나열, 줄세워라
+		var 배열명 = new Array();
+		var 배열명 = []
+
+		ex)
+		사람들이 버스를 탄다             |   배열처리
+		사림이 많다	 					 |   데이터가 많다.(3개이상이면?)
+		줄세워라						 |   나열, 줄세워라
+		빨리 버스를 탈 수 있다.          |   처리속도를 빠르게
+		(효율:수정,삽입,삭제 용이)       |   (메모리 효율관리: 삭제,수정 용이)
+		
+		var arr = new Array();    =    var arr = [100,50,30,60]
+		arr[0] = 100;
+		arr[1] = 50;
+		arr[2] = 30;
+		arr[3] = 60;
+
+
+	</pre>
+</body>
+</html>
+
+
+
+
+

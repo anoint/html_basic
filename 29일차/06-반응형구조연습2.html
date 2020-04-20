@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>		
+		#wrap{width: 1000px; margin: auto;}
+		#wrap .box{width: 33.333%; height: 250px; float: left;}
+		.box1 {background: red;}
+		.box2 {background: yellow;}
+		.box3 {background: green;}
+
+		@media screen and (max-width: 1200px) {
+			#wrap{width: 95%;}
+		}
+		@media screen and (max-width: 800px) {
+/*			.box1{width: 50%;}
+			.box2{width: 50%;}*/
+			#wrap .box{width: 50%;}
+			#wrap .box3{display: none;}
+		}
+		@media screen and (max-width: 480px) {
+			#wrap .box1{display: none;}
+			#wrap .box2{width: 100%;}
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="box box1"></div>
+		<div class="box box2"></div>
+		<div class="box box3"></div>
+	</div>
+</body>
+</html>
+
+
+
+

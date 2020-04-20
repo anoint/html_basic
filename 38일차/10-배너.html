@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>배너만들기</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="js/jquery.js"></script>
+	<style>
+		.banner{width: 1000px; height: 576px; position: relative; margin: auto;}
+		.main-banner{}
+		.main-banner li{position: absolute; left: 0; top: 0;}
+		.paging{position: absolute; right: 0; top: 50px;}
+		.paging li{width: 20px; height: 20px; float: left;
+		 		   margin-right: 10px; border-radius: 50%;
+		 		   background: #333; transition: 0.3s}
+		.paging li.on{background: pink;}
+		.btn-wrap{position: absolute; right: 170px; top: 40px;}
+		.btn-wrap .btn{float: left;
+		 margin-right: 10px;}
+		 .btn-wrap .btn a{width: 40px; height: 40px; 
+		 				  border: 1px solid #000; font-size: 20px; line-height: 2; 
+		 				  text-align: center; background: #fff; display: block;
+		  }
+	</style>
+	<script>
+		$(function(){
+		////////////////////////////////////////////////////
+			var count = 0; //번호 담는 변수생성
+			$(".banner .main-banner li").hide().first().show();
+			//다 숨기고 첫번째만 보여라
+
+			//.li 모두 숨기고 해당 li만 보이게해라
+			$(".banner .paging li").eq(1).click(function(){
+				count = $(this).index();
+				$(".banner .main-banner li").hide()
+				$(".banner .main-banner li").eq(count).hide().fadeIn();
+				$(".banner .paging li").removeClass("on");
+				$(this).addClass("on");
+				//paging li의 모두 클래스 떼어 
+				//paging -> 해당 li 클래스 붙여
+			});
+			$(".banner .paging li").eq(2).click(function(){
+				count = $(this).index();
+				$(".banner .main-banner li").hide();
+				$(".banner .main-banner li").eq(count).fadeIn();
+				$(".banner .paging li").removeClass("on");
+				$(this).addClass("on");
+			});
+			$(".banner .paging li").eq(3).click(function(){
+				count = $(this).index();
+				$(".banner .main-banner li").hide();
+				$(".banner .main-banner li").eq(count).fadeIn();
+				$(".banner .main-banner li").removeClass("on");
+				$(this).addClass("on;")
+			});
+			$(".banner .paging li").eq(4).click(function(){
+				count = $(this).index();
+				$(".banner .main-banner li").hide();
+				$(".banner .main-banner li").eq(count).fadeIn();
+				$(".banner .main-banner li").removeClass("on");
+				$(this).addClass("on;")
+			});
+
+
+		////////////////////////////////////////////////////
+	})
+	</script>
+	
+</head>
+<body>
+	<!-- div.banner>ul.main-banner>li*5>img[src=images/img.png]^^ul.paging>li*5^ul.btn-wrap>li.btn>a[href=#]{&lt;&gt;} -->
+	<div class="banner">
+		<ul class="main-banner">
+			<li><img src="images/img0.png" alt=""></li>
+			<li><img src="images/img1.png" alt=""></li>
+			<li><img src="images/img2.png" alt=""></li>
+			<li><img src="images/img3.png" alt=""></li>
+			<li><img src="images/img4.png" alt=""></li>
+		</ul>
+		<ul class="paging">
+			<li class="on"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<ul class="btn-wrap">
+			<li class="btn prev"><a href="#">&lt;</a></li>
+			<li class="btn next"><a href="#">&gt;</a></li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+

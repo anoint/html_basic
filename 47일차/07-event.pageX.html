@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	div{width: 600px; height: 500px; border: 1px solid #000;
+		font-size: 50px; position: relative;}
+	div span{display: block; width: 50px; height: 50px; 
+			 border-radius: 50%; background: red;
+			 position: absolute; left: 0; top: 0;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		//span이 div에 마우스를 올린 순간 계속 따라다니게 만들기
+		var posX = 0
+		var posY = 0
+		$("div").hover(function(e){ //호버는 한번만 실행
+			//event 기능 쓰기전에 무조건 적어줘야함 //event, evt, e
+			posX = e.pageX;
+			posY = e.pageY;
+			$("div span").css({left:posX,top:posY});
+		})
+		$("div").mousemove(function(event){ //무브는 계속 실행
+			posX = event.pageX;
+			posY = event.pageY;
+			$("div span").css({left:posX,top:posY});
+		})
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div>
+		<span></span>
+	</div>
+</body>
+</html>
+
+
+
+
+

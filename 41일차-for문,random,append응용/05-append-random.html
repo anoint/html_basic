@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<style>
+	p{margin: 20px;}
+	.box{width: 1500px; margin: auto; border: 1px solid #000;
+		 padding: 20px; overflow: hidden;}
+	.box img{width: 150px; float: left; margin: 15px;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var cnt = 0, imgUrl= "";
+		$("button").eq(0).click(function(){
+			var img=$("<img>").attr("src","images/img0.png");
+			$(".box").append(img);
+		});
+		$("button").eq(1).click(function(){
+			//img0부터 img7까지 연속으로 출력하기 ->for문
+				for(var i = 0 ; i <=7 ; i++){
+					imgUrl = "images/img"+i+".png";
+					console.log(imgUrl);
+					var img = $("<img>").attr("src",imgUrl);
+					$(".box").append(img);
+				}
+		});
+		$("button").eq(2).click(function(){
+			//0부터 7까지 중에서 랜덤으로 출력하기
+			cnt = Math.random() * 8;
+			cnt = Math.floor(cnt);
+			imgUrl = "images/img"+cnt+".png";
+			var img = $("<img>").attr("src",imgUrl);
+			$(".box").append(img);
+			img.css("opacity","0");
+			img.animate({opacity:1},400);
+		});
+		$("button").eq(3).click(function(){
+			$(".box").empty();
+		});
+		$("button").eq(4).click(function(){
+			$(".box").remove();
+		});
+		$("button").eq(5).click(function(){
+			$(".box").toggle();
+		});
+			
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<p>
+		<button>요소생성하기</button>
+		<button>0~7까지 생성하기</button>
+		<button>random생성하기</button>
+		<button>자식지우기</button>
+		<button>모두지우기</button>
+		<button>생성&지우기</button>
+	</p>
+	<div class="box"></div>
+</body>
+</html>
+
+
+
+
+

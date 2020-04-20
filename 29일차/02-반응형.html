@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>		
+		div{width: 1000px; height: 400px; margin: auto; 
+			background: skyblue;}
+
+			@media screen and (min-width: 1200px){
+				div{width: 90%; background: blue;}
+				
+			}
+			/* 1200보다 커지면 픽셀이였는데 너비를 90%으로 바꾸고 파랑으로 바꾼다 */
+			@media screen and (min-width: 481px) and (max-width: 1199px){
+				div{width: 100%; background: green;}
+				
+			}
+			/* 1199까지는 초록으로 나오고 481보다 작으면 원래값(스카이블루)로 나온다. */
+			@media screen and (max-width: 480px) {
+				div{width: 95%; background: pink;}
+				
+			}
+	</style>
+</head>
+<body>
+	<div></div>
+	
+</body>
+</html>
+
+
+
+

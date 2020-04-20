@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>
+		.text-box{ width: 1000px; height: 80px; 
+			border-bottom: 2px solid #000;
+		position: relative; margin: 50px auto; 
+		}
+		.text-box span{
+			position: relative; float: left;
+			font-size: 70px; line-height: 80px;
+			text-transform: uppercase; /* 대문자로 바꾸기 */
+		}
+		.text-box span:nth-child(1){
+			animation: ani1 0.3s ease-in-out 1
+		}
+		.text-box span:nth-child(2){
+			animation: ani2 0.5s ease-in-out 1
+		}
+		.text-box span:nth-child(3){
+			animation: ani3 0.7s ease-in-out 1
+		}
+		.text-box span:nth-child(4){
+			animation: ani4 0.9s ease-in-out 1
+		}
+		.text-box span:nth-child(5){
+			animation: ani5 1.1s ease-in-out 1
+		}
+		.text-box span:nth-child(6){
+			animation: ani6 1.3s ease-in-out 1
+		}
+		.text-box span:nth-child(7){
+			animation: ani7 1.5s ease-in-out 1
+		}
+		.text-box span:nth-child(8){
+			animation: ani8 1.7s ease-in-out 1
+		}
+		.text-box span:nth-child(9){
+			animation: ani9 1.9s ease-in-out 1
+		}
+/* delay로하면 있던자리에서 사라졌다가 올라오게되서 이상함 */
+		@keyframes ani1{
+			0%{ top: 100px; opacity: 0;}
+			100%{top: 0; opacity: 1;}
+		}
+		@keyframes ani2{
+			0%, 10%{ top: 100px; opacity: 0;}
+			100%{top: 0; opacity: 1;}
+		}
+		/* 같은건 쉼표로 나열할 수 있다. */
+		@keyframes ani3{
+			0%,15%{ top: 100px; opacity: 0;}
+			100%{top: 0; opacity: 1;}
+		}
+		@keyframes ani4{
+			0%,20%{ top: 100px; opacity: 0;}
+			100%{top: 0; opacity: 1;}
+		}
+		@keyframes ani5{
+			0%,25%{ top: 100px; opacity: 0;}
+			100%{top: 0; opacity: 1;}
+		}
+		@keyframes ani6{
+			0%,30%{ top: 100px; opacity: 0;}
+			100%{top: 0; opacity: 1;}
+		}
+		@keyframes ani7{
+			0%,35%{ top: 100px; opacity: 0;}
+			100%{top: 0; opacity: 1;}
+		}
+		@keyframes ani8{
+			0%,40%{ top: 100px; opacity: 0;}
+			100%{top: 0; opacity: 1;}
+		}
+		@keyframes ani9{
+			0%,45%{ top: 100px; opacity: 0;}
+			100%{top: 0; opacity: 1;}
+		}
+	</style>
+</head>
+<body>
+	<div class="text-box">
+		<span>P</span>
+		<span>o</span>
+		<span>r</span>
+		<span>t</span>
+		<span>f</span>
+		<span>o</span>
+		<span>l</span>
+		<span>i</span>
+		<span>o</span>
+	</div>
+</body>
+</html>
+
+
+
+

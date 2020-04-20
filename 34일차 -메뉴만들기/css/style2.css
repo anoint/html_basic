@@ -1,0 +1,35 @@
+
+#header{width: 100%; min-width: 1500px;
+        background-repeat: repeat;
+        background-position: 0 0;
+        background-image: url(../images/bg_header.jpg);}
+#header .inner-1200{
+    width: 1200px; height: 156px; margin: auto; position: relative;
+}
+#header h1{position: absolute; left: 0; top: 52px;}
+#header .top-menu{position: absolute; right: 0; top: 10px;}
+#header .top-menu dd{float: left; margin-left: 15px;}
+#header .top-menu dd a{font-size: 12px;}
+
+#nav{position: absolute; right: 0; top: 70px;}
+/* 메뉴의 위치 */
+#gnb{position: relative;}
+/* 서브메뉴의 기준 */
+#gnb li{float: left; margin-left: 70px;}
+#gnb > li:first-child{margin-left: 0;}
+/* 안적어 주면 ml70 해놓은것 때문에 서브 메뉴가 메뉴보다 앞쪽부터 시작한다.*/
+#gnb li a{font-size: 20px;}
+#gnb li ul{position: absolute; left: 0; top: 52px;
+           display: none;} /* 서브메뉴 */
+#gnb li ul li{margin: 0; margin-right: 15px;}
+#gnb li ul li:last-child{margin-right: 0;}
+#gnb li ul li a{font-size: 16px; }
+
+#gnb li.menu1 ul{left: 0px;}
+#gnb li.menu2 ul{left: 185px;}
+#gnb li.menu3 ul{left: 370px;}
+#gnb li.menu4 ul{left: 302px;}
+#gnb li.menu5 ul{left: 297px;}
+#gnb li.menu6 ul{left: 670px; /* 밀리면 width값주기 */ }
+
+#gnb li:hover ul{display: block;}

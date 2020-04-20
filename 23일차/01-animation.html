@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>		
+		div{
+			width: 100px; height: 100px; background: #3bcda9;
+			animation-name: ani;
+			animation-duration: 3s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: 5;
+			animation-delay: 2s;
+			animation-direction: alternate; /* 왕복 */
+			position: relative;
+		}
+		@keyframes ani{
+			0%{left:0;}
+			100%{left: 1000px; background: yellow; border-radius: 50%; transform: scale(5) rotateX(60deg);}
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>
+
+
+
+

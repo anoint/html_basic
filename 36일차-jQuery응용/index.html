@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>	
+	<link rel="stylesheet" href="css/reset.css" />
+	<script src="js/jquery.js"></script>
+	<style>
+		.gallery{width: 660px; margin: auto; margin-top: 20px;}
+		.big-img{width: 500px; float: left; margin-right: 10px;}
+		.con-right{width: 150px; position: relative; float: right;}
+		.con-right ul{}
+		.con-right ul li{width: 33px; height: 33px; float: left; margin-bottom: 2px;}
+		.con-right ul li img{width: 33px; height: 33px;}
+		.con-right p{font-size: 18px; font-weight: bold; position: absolute; left: 0; top: 220px;}
+	</style>
+	<script>
+		$(function(){
+			/////////////////////////////
+			var count = 0;
+			$(".con-right ul li").click(function(){
+				count = $(this).index();
+				$(".big-img img").attr("src","images/img"+count+".jpg");
+				$(".con-right p").text("imageView"+count);
+			});
+			/////////////////////////////
+		});
+	</script>
+</head>
+<body>
+	<!-- div.gallery>div.big-img>img^div.con-right>ul.cf>li*24>img[src="images/img$.jpg"]^^p -->
+	<div class="gallery">
+		<div class="big-img"><img src="images/img0.jpg" alt=""></div>
+		<div class="con-right">
+			<ul class="cf">
+				<li><img src="images/thum0.jpg" alt=""></li>
+				<li><img src="images/thum1.jpg" alt=""></li>
+				<li><img src="images/thum2.jpg" alt=""></li>
+				<li><img src="images/thum3.jpg" alt=""></li>
+				<li><img src="images/thum4.jpg" alt=""></li>
+				<li><img src="images/thum5.jpg" alt=""></li>
+				<li><img src="images/thum6.jpg" alt=""></li>
+				<li><img src="images/thum7.jpg" alt=""></li>
+				<li><img src="images/thum8.jpg" alt=""></li>
+				<li><img src="images/thum9.jpg" alt=""></li>
+				<li><img src="images/thum10.jpg" alt=""></li>
+				<li><img src="images/thum11.jpg" alt=""></li>
+				<li><img src="images/thum12.jpg" alt=""></li>
+				<li><img src="images/thum13.jpg" alt=""></li>
+				<li><img src="images/thum14.jpg" alt=""></li>
+				<li><img src="images/thum15.jpg" alt=""></li>
+				<li><img src="images/thum16.jpg" alt=""></li>
+				<li><img src="images/thum17.jpg" alt=""></li>
+				<li><img src="images/thum18.jpg" alt=""></li>
+				<li><img src="images/thum19.jpg" alt=""></li>
+				<li><img src="images/thum20.jpg" alt=""></li>
+				<li><img src="images/thum21.jpg" alt=""></li>
+				<li><img src="images/thum22.jpg" alt=""></li>
+				<li><img src="images/thum23.jpg" alt=""></li>
+			</ul>
+			<p>imageView5</p>
+		</div>
+	</div>
+	
+</body>
+</html>
+
+
+
+

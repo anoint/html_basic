@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	.tip{width: 600px; height: 400px; border: 1px solid #000; position: relative; padding: 10px;}
+	.tip em{background: yellow;}
+	.tip span{display: block; width: 200px; position: absolute; left: 0; top: 0; 
+			  padding: 10px; background: skyblue; color: #fff; display: none;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var tx = 0 , ty = 0;
+		$(".tip em").hover(function(e){
+			tx = e.pageX;
+			ty = e.pageY;
+			$(".tip span").stop().fadeIn(); //한번만 실행해!(stop)
+			$(".tip span").css({left:tx,top:ty});
+		},function(){
+			$(".tip span").stop().fadeOut();
+		});
+		$(".tip em").mousemove(function(e){
+			tx = e.pageX+10; //10만큼 거리 두기
+			ty = e.pageY+10;
+			$(".tip span").css({left:tx,top:ty});
+		})
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<!-- 설명 박스 만들기 (따라 다니는 도움말)-->
+	<div class="tip">
+		모든 국민은 법률이 정하는 바에 의하여 납세의 의무를 진다. 중앙선거관리위원회는 법령의 범위안에서 <em>선거관리·국민투표관리</em> 또는 <span>정당사무에 관한 규칙을 제정할 수 있으며, 법률에 저촉되지 아니하는 범위안에서</span> 내부규율에 관한 규칙을 제정할 수 있다.
+
+		모든 국민은 양심의 자유를 가진다. 지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법 기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다.
+	</div>
+</body>
+</html>
+
+
+
+
+

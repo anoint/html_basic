@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	div{width: 600px; height: 500px; border: 1px solid #000; font-size: 50px;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var posX = 0
+		var posY = 0
+		$("div").hover(function(e){ //호버는 한번만 실행
+			//event 기능 쓰기전에 무조건 적어줘야함 //event, evt, e
+			posX = e.pageX;
+			posY = e.pageY;
+			$("div").text("X: "+ posX + "Y: "+ posY);
+		})
+		$("div").mousemove(function(event){ //무브는 계속 실행
+			posX = event.pageX;
+			posY = event.pageY;
+			$("div").text("X: "+ posX + "Y: "+ posY);
+		})
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div></div>
+</body>
+</html>
+
+
+
+
+

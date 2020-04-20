@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	.banner{width: 1000px; margin: auto; position: relative;
+			height: 576px;}
+	.banner .mask{width: 1000px; height: 576px;}
+	.banner .mask ul{position: relative;}
+	.banner .mask ul li{float: left;}
+	.banner .paging{overflow: hidden; margin-top: 10px;}
+	.banner .paging li{ float: left; width: 30px; height: 30px; 
+						border-radius: 50%; background: pink; margin: 10px;}
+	 .banner .paging li.on{background: skyblue;}
+	 .banner .btn{}
+	 .banner .btn button{padding: 10px; font-size: 18px;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		$(".banner .mask").css({"overflow":"hidden"});
+		$(".banner .mask ul").width(5000); //css에서 바꿔도 되지만 여기에 쓰면 바로바로 수정이 가능하기때문에 주로 이렇게 쓴다.
+
+		//배열에 담아서 움직이도록
+		var arrX = [0,-1000,-2000,-3000,-4000]
+		var arrURL =[];
+		arrURL[0]="http://www.naver.com";
+		arrURL[1]="http://www.nate.com";
+		arrURL[2]="http://www.google.com";
+		arrURL[3]="http://www.daum.net";
+		arrURL[4]="http://www.tjouen.com";
+		var size = arrX.length; //총 갯수
+		console.log(size);
+		var timer = 0, delay = 3000, count = 0;
+		var $li=$(".banner .paging li")
+		timer = setInterval(make,delay);
+
+		function make(){
+			count++;
+			//처음으로 롤링하기
+			if(count == size){count = 0}
+			banner();
+		}
+		//마스크에 올려놓으면 멈춤 내려놓으면 다시 3초단위
+		//누르면 네이버로 이동
+		$(".banner .mask ul").hover(function(){
+			clearInterval(timer);
+		}, function(){
+			timer = setInterval(make,delay);
+		});
+		$(".banner .mask ul").click(function(){
+			window.open(arrURL[count]);
+		});
+
+		//li클릭하며 배너움직이게
+		$li.click(function(){
+			count = $(this).index();
+			$(".banner .mask ul").animate({right:arrX[count]});
+			$li.removeClass("on");
+			$li.eq(count).addClass("on");
+			clearInterval(timer);
+			timer = setInterval(make,delay);
+		});
+		$(".banner .prev").click(function(){
+			count--;
+			if(count < 0 ){count = size-1}
+			banner();
+			clearInterval(timer);
+			timer = setInterval(make,delay);
+		});
+		$(".banner .next").click(function(){
+			count++;
+			if(count == size){count = 0}
+			banner();
+			clearInterval(timer);
+			timer = setInterval(make,delay);
+		});
+
+		function banner(){
+			//공통 코드를 입력
+			$(".banner .mask ul").animate({left:arrX[count]});
+			$li.removeClass("on");
+			$li.eq(count).addClass("on");//this로 쓰면 안됌
+		}
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<!-- .banner>.mask>ul>li*5>img[src=images/img$.png] -->
+	<div class="banner">
+		<div class="mask">
+			<ul>
+				<li><img src="images/img0.png" alt=""></li>
+				<li><img src="images/img1.png" alt=""></li>
+				<li><img src="images/img2.png" alt=""></li>
+				<li><img src="images/img3.png" alt=""></li>
+				<li><img src="images/img4.png" alt=""></li>
+				
+			</ul>
+		</div>
+		<ul class="paging">
+			<li class="on"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<div class="btn">
+			<button class="prev">&lt;</button>
+			<button class="next">&gt;</button>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+

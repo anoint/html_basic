@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	div{width: 1200px; height: 800px; margin: auto; }
+	div p{font-size: 100px; padding-top: 50px;}
+	div:nth-child(1){background: #90CAF9}
+	div:nth-child(2){background: #B39DDB}
+	div:nth-child(3){background: #C5CAE9}
+	div:nth-child(4){background: #81D4FA}
+	div:nth-child(5){background: #80DEEA}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var arrPosY = []
+		for(var i = 0; i < 5 ; i++){
+		arrPosY[i] = $("div").eq(i).offset().top;
+		$("div").eq(i).find("p").text(arrPosY[i]);
+		}
+		$("html, body").animate({
+			scrollTop:arrPosY[2]  //끝에 ;붙이면 안됌
+		},1000)
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div class="box"><p>?????</p></div>
+	<div class="box"><p>?????</p></div>
+	<div class="box"><p>?????</p></div>
+	<div class="box"><p>?????</p></div>
+	<div class="box"><p>?????</p></div>
+</body>
+</html>

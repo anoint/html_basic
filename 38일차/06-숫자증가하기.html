@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제이쿼리</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="js/jquery.js"></script>
+	<style>
+		div{border-bottom: 1px solid #000;
+		width: 500px; height: 100px; font-size: 50px; line-height: 2; text-align: center;}
+		button{padding: 15px; font-size: 20px;}
+	</style>
+	<script>
+		$(function(){
+		////////////////////////////////////////////////////
+			var count = 0;
+			$("div").text(count);
+			$(".next").click(function(){
+				count ++ // count += 1, count = count + 1
+				$("div").text(count);
+			});
+			$(".prev").click(function(){
+				count -- //count -=1, count = count - 1
+				$("div").text(count);
+			});
+		////////////////////////////////////////////////////
+	})
+	</script>
+	
+</head>
+<body>
+	<div></div>
+	<p>
+		<button class="prev">이전</button>
+		<button class="next">다음</button>
+	</p>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="js/jquery.js"></script>
+	<style>
+		.box{width: 800px; height: 600px; border: 1px solid #000; padding: 20px; margin: auto;}
+		.box h1{font-size: 50px; background: yellow;}
+		.box h2{font-size: 40px; background: green;}
+		.box h3{font-size: 30px; background: blue;}
+		.box h4{font-size: 20px; background: pink;}
+		.box p{background: skyblue;}
+		.box img{width: 400px;}
+	</style>
+	<script>
+		$(function(){
+		////////////////////////////////////////////////////
+			//$("<요소>") -> 요소 생성하기
+			var h1 = $("<h1>").text("나는 제목1입니다.");
+			$(".box").append(h1); //생성해서 갖다 붙이기도 가능
+			var h2 = $("<h2>").text("나는 제목2입니다.");
+			$(".box").append(h2);
+			var h3 = $("<h3>").text("나는 제목3입니다.")
+			$(".box").append(h3);
+			var h4 = $("<h4>").text("나는 제목4입니다.")
+			$(".box").append(h4);
+			var p = $("<p>").text("나는 문단입니다.")
+			$(".box").append(p);
+			var img =  $("<img>").attr("src","images/img0.png");
+			var img1 =  $("<img>").attr("src","images/img3.png");
+			$(".box").prepend(img);
+			$(img1).prependTo(".box");
+
+			$("button").eq(0).click(function(){
+				$(".box").empty(); //자식을 삭제
+			});
+			$("button").eq(1).click(function(){
+				$(".box").remove(); //자신을 삭제
+			});
+		////////////////////////////////////////////////////
+	})
+	</script>
+	
+</head>
+<body>
+	<div class="box">
+		
+	</div>
+	<p>
+		<button>empty</button>
+		<button>remove</button>
+	</p>
+</body>
+</html>
+
+
+
+
+

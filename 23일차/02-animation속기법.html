@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>		
+		div{
+			width: 100px; height: 100px; background: #3bcda9;
+/* animation: 이름 시간 효과 (지연시간 반복횟수 번갈아가며)<-생략, 순서변경 가능 */
+			animation: ani 10s ease-in-out infinite 0s alternate;
+			position: relative;
+		}
+		@keyframes ani{
+			0%{left:0;top: 0;}
+			25%{left:1000px;top: 0; background: skyblue;}
+			50%{left: 1000px;top: 1000px;background: coral;}
+			75%{left: 0; top: 1000px; background: #8388ff;}
+			100%{left: 0; top: 0;}
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>
+
+
+
+

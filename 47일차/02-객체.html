@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	div{ width: 600px; height: 80px; border: 1px solid #000;
+		 font-size: 30px; line-height: 80px; padding: 20px;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var now = new Date();
+		var msg = "";
+		var year = now.getFullYear(); //연도만 뽑아와라 (set은 지정하는)
+		var month = now.getMonth(); //달이 0부터 시작하기때문에 +1 해줘야함
+		var date = now.getDate();
+		var day = now.getDay(); //요일 0일요일 1월
+
+		msg =  year+"년" + month +"월"+date+"일";
+		msg += day + "요일"
+		$("div").text(msg);
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div></div>
+	<pre>
+		객체 : 각종사물 (만질 수 있고, 볼 수 있고, 느낄 수 있고)
+    			.속성: 특징, 특성, 고유값
+    			.메서드(): 행동
+			ex) 강아지.속성: 털색, 종, 성별, 나이
+       			강아지.메서드(): 뛰기, 걷기, 구르기, 꼬리흔들기...
+
+       			사람.속성: 나이, 주민번호, 피부색, 성별
+       			사람.메서드(): 걷기, 뛰기...
+	</pre>
+</body>
+</html>
+
+
+
+
+

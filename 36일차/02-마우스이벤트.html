@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>마우스이벤트</title>
+	<link rel="stylesheet" href="css/reset.css"  />
+	<link rel="stylesheet" href="css/fonts.css"  />	
+	<script src="js/jquery.js"></script> 
+	<style>
+		ul{margin: 50px;}
+		ul li{width: 400px; height: 60px; border: 1px solid #000;
+			  margin-bottom: 5px;
+			  transition:0.4s;}
+	</style>
+	<script>
+		$(function(){
+			/////////////////////////////////////
+			$("ul li:eq(0)").click(function(){
+				$("ul li").eq(0).css("background","red");
+			});
+			$("ul li").eq(1).click(function(){
+				$("ul li").eq(1).css("background","yellow").css("width","800px").css("height","100px")
+			});
+			$("ul li").eq(2).click(function(){
+				$("ul li").eq(2).css({"background":"pink","width":"1000px","font-size":"40px"});
+			});
+			$("ul li").eq(3).click(function(){
+				$("ul li").eq(3).css({"width":"100px","height":"100px","background":"coral"});
+			});
+			$("ul li:eq(4)").click(function(){
+				$("ul li").eq(4).css({"font-size":"60px","width":"200px","height":"100px","background":"skyblue"});
+			});
+			$("ul li").eq(5).click(function(){
+				$("ul li").css("background","red").css({"width":"400px","height":"60px"});
+			});
+			////////////////////////////////////
+		})
+	</script>
+</head>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

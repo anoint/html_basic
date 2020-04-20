@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css"  />
+	<link rel="stylesheet" href="css/fonts.css"  />	
+	<script src="js/jquery.js"></script> 
+	<style>
+		.wrap{margin: 50px;}
+		.wrap .big-img{}
+		.wrap .big-img img{}
+		.wrap ul{margin-top: 20px;}
+		.wrap ul li{width: 120px; padding: 5px;
+					float: left; background: #dcdcdc;
+					margin-right: 5px;
+					cursor: pointer;}
+		.wrap ul li img{width: 120px;}
+
+	</style>
+	<script>
+		$(function(){
+			/////////////////////////////////////
+			var count = 0;
+			/* $(".wrap ul li").eq(0).click(function(){
+				count = $(this).index();
+				$(".wrap .big-img img").attr("src","images/img"+count+".jpg");
+			}); */
+				$(".wrap ul li").click(function(){
+				count = $(this).index();
+				$(".wrap .big-img img").attr("src","images/img"+count+".jpg");
+			});
+			////////////////////////////////////
+		})
+	</script>
+</head>
+<body>
+	<!-- div.wrap>.big-img>img^ul.cf>li*6>img[src=images/img$.jpg] -->
+	<div class="wrap">
+		<div class="big-img"><img src="images/img3.jpg" alt=""></div>
+		<ul class="cf">
+			<li><img src="images/img0.jpg" alt=""></li>
+			<li><img src="images/img1.jpg" alt=""></li>
+			<li><img src="images/img2.jpg" alt=""></li>
+			<li><img src="images/img3.jpg" alt=""></li>
+			<li><img src="images/img4.jpg" alt=""></li>
+			<li><img src="images/img5.jpg" alt=""></li>
+		</ul>
+	</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

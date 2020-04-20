@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	div{width: 500px; height: 80px; margin: 10px; background-color: skyblue;
+		border: 1px solid #000; position: relative;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		//.animate({"속성":"값"},시간) -> 1초 = 1000 , 2초 = 2000
+		$("div").eq(0).animate({"width":"1000px"},1000);
+		$("div").eq(1).animate({"width":"1500px"},2000)
+					  .animate({"height":"150px"},1000)
+					  .animate({"width":"100px"},1000)
+					  .animate({"height":"100px"},1000)
+					  .animate({"left":"1500px"},3000)
+					  .animate({"top":"200px"},1000);
+					  //순서대로 움직임
+		$("div").eq(2).animate({"width":"500px"},1000).animate({"height":"500px"},2000).animate({"width":"200px"},1000).animate({"height":"200px"},1000).animate({"left":"1200px"},1000).animate({"top":"500px"},2000);
+		$("div").eq(3).animate({"width":"500px","height":"300px","left":"100px","top":"-150px"},3000);
+		$("div").eq(4).animate({"background-color":"yellow"},1000);
+		$("div").eq(5).animate({"background-color":"green"},1000);
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>
+
+
+
+
+

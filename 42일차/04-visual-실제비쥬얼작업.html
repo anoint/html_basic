@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<style>
+	#wrap{width: 100%; min-width: 1500px}
+	.top-bar{width: 100%; height: 80px; position: relative; background: yellow;}
+	.top-bar a{position: absolute; right: 20%; bottom: 0; display: block;
+	 		   width: 40px; height: 40px; font-size: 40px; line-height: 1; text-align: center;
+	 		   background: #000; color: #fff;}
+	#header{width: 100%; height: 150px; position: relative; background: #b3e5fc;}
+	#header h1{position: absolute; left: 20%; top: 50px;}
+	#visual{width: 100%; height: 600px; position: relative;}
+	#visual .main-banner{width: 100%; height: 600px;
+						 position: relative;
+						  overflow: hidden;}
+	#visual .main-banner li{position: absolute; width: 100%; height: 600px; 
+							background-repeat: no-repeat;
+		 					background-position:  50% 50%;
+		 					background-size: cover;
+		 					left: -100%; top: 0;}
+	#visual .main-banner li:nth-child(1){
+		left: 0; background-image: url(images/img0.png);}
+	#visual .main-banner li:nth-child(2){
+		 background-image: url(images/img1.png);}
+	#visual .main-banner li:nth-child(3){
+		 background-image: url(images/img2.png);}
+	#visual .main-banner li:nth-child(4){
+		 background-image: url(images/img3.png);}
+	#visual .main-banner li:nth-child(4){
+		 background-image: url(images/img4.png);}
+	#visual .main-banner li:nth-child(5){
+		background-image: url(images/img5.png);}
+	#visual .paging {position: absolute; bottom: 10px; left: 50%; margin-left: -70px;}
+	#visual .paging li{ width: 20px; height: 20px; border-radius: 50%; 
+						background: #ef6c00; float: left; margin-right: 10px;}
+	#visual .paging li.on{background: #18ffff;}
+	#visual .btn-wrap{}
+	#visual .btn-wrap .btn{position: absolute; top: 50%;}
+	#visual .btn-wrap .btn a{display: block; width: 50px; height: 50px;
+							 font-size: 40px; line-height: 50px; text-align: center;
+							 background: rgba(255,255,255,0.4);}
+	#visual .btn-wrap .prev{left: 10%;}
+	#visual .btn-wrap .next{right: 10%;}
+
+</style>
+<script>
+	$(function(){
+		////////////////////////////////////////////////////////////
+		//엑스 눌렀을때 사라지게
+		$(".top-bar a").click(function(){
+			$(".top-bar").slideUp();
+		});
+
+		var current = 0 , old = 0;
+		var $pagingli = $("#visual .paging li");
+		var $mainli =$("#visual .main-banner li")
+		var $next =$("#visual .btn-wrap .next");
+		var $prev =$("#visual .btn-wrap .prev");
+
+		$("#visual .paging li").click(function(){
+			//번호뽑기 
+			current = $(this).index();
+			if(current != old){
+			$mainli.eq(current).stop().css("left","-100%").animate({left:0},400); 
+			//현재는 -100%에서 0으로
+			$mainli.eq(old).stop().css("left",0).animate({left: "100%"},400); 
+			//과거는 0에서 100%으로 animate처리
+			$pagingli.removeClass("on");
+			$pagingli.eq(current).addClass("on");
+			old = current; 
+			//과거변수에 현재값 담기
+			}
+		});
+		
+		$next.click(function(){
+			current++;
+			//if문 롤링
+			if(current > 4 ){current = 0}
+				$mainli.eq(current).stop().css("left","-100%").animate({left:0},400);
+				$mainli.eq(old).stop().css({left:0}).animate({left:"100%"},400);
+				$pagingli.removeClass("on");
+				$pagingli.eq(current).addClass("on");
+				old = current;
+		});
+		$prev.click(function(){
+			current --;
+			if(current < 0){current = 4}
+				$mainli.eq(current).stop().css("left","100%").animate({left:0},400);
+				$mainli.eq(old).stop().css({left:0}).animate({left:"-100%"},400);
+				$pagingli.removeClass("on");
+				$pagingli.eq(current).addClass("on");
+				old = current;
+		});
+		///////////////////////////////////////////////////////////
+	})
+</script>
+	
+</head>
+<body>
+	<!-- div#wrap>(div.top-bar>a[href=#]{X})+(header#header>h1>a[href=#]>img)+(section#visual>ul.main-banner>li*5^ul.paging>li*5^ul.btn-wrap>li.btn>a[href=#]{&lt;}) -->
+	<div id="wrap">
+		<div class="top-bar"><a href="#">X</a></div>
+		<header id="header">
+			<h1><a href="#"><img src="http://placehold.it/100x50" alt=""></a></h1>
+		</header>
+		<section id="visual">
+			<ul class="main-banner">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="paging">
+				<li class="on"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="btn-wrap">
+				<li class="btn prev"><a href="#">&lt;</a></li>
+				<li class="btn next"><a href="#">&gt;</a></li>
+			</ul>
+		</section>
+	</div>
+</body>
+</html>
+
+
+
+
+

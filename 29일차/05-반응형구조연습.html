@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>		
+		#wrap{width: 1000px; margin: auto;}
+		#wrap .box{width: 20%; height: 250px; float: left;}
+		#wrap .box1{background: #C5E1A5;}
+		#wrap .box2{background: #AED581;}
+		#wrap .box3{background: #9CCC65;}
+		#wrap .box4{background: #DCE775;}
+		#wrap .box5{background: #D4E157;}
+
+		@media screen and (max-width: 1200px) {
+			#wrap{width: 95%;}
+		}
+		@media screen and (max-width: 800px) {
+		#wrap .box1{width: 100%;}
+		#wrap .box2{width: 25%;}
+		#wrap .box3{width: 25%;}
+		#wrap .box4{width: 25%;}
+		#wrap .box5{width: 25%;}
+		/* 점수체계 때문에 보이지 않는다. (우선순위 점수가 동일하게 되야하기때문에 #wrap을 붙여야 한다.) */
+		}
+		@media screen and (max-width: 480px) {
+			#wrap .box2{width: 100%;}
+			#wrap .box3{width: 100%;}
+			/*#wrap .box4, #wrap .box5{display: none;}*/
+			#wrap .box4{display: none;}
+			#wrap .box5{display: none;}
+		}
+
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="box box1"></div>
+		<div class="box box2"></div>
+		<div class="box box3"></div>
+		<div class="box box4"></div>
+		<div class="box box5"></div>
+	</div>
+	
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+</style>
+<script>
+	$(function(){
+		/////////////
+		function make(){ //함수명 => 변수명 규칙 동일(사용자정의 - 숫자 아닌걸로 시작해야하고 한글X)
+			document.write("안녕하세요<br/>");
+			document.write("나는 홍길동입니다.<br/>");
+			document.write("나는 12살입니다.<br/>");
+		} //->정의
+		make(); //-> 호출
+		document.write("--------------------------------------<br/>");
+
+		//10번 호출 + for문
+		for(var i = 0; i < 10; i++){
+			make();
+		}
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<pre>
+		함수란? 자주 사용하는 문장을 담아두는 공간
+		** 재사용 -> 중복 코드를 줄일 수 있다.
+		
+		형식)
+		function 함수명(){
+			할일을 정의하자
+			여러줄의 코드
+		} -> 정의하기 (실행X)
+
+		함수명(); ->함수호출
+		
+		------------------------------------------
+		ex) 메모장: 
+			function 중딩욕(){
+				욕1 ~ 욕20
+			}
+
+		1. 주제 리니지 게임을 하려고 함. - 나는 중딩
+		게임방 개설
+		초대
+		인사
+		게임시작
+		대화.. 아이템배분
+		상대욕
+		<!-- 욕1 / 욕2 / 욕3 -->
+		중딩욕()
+		중딩욕() <!-- 상대가 1번 욕할 때 나는 20마디 할 수 있다. (재활용도 가능) -->
+	</pre>
+</body>
+</html>
+
+
+
+
+

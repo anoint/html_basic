@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>		
+		.wrap{width: 1200px; margin: auto;}
+		/* 부모는 픽셀값을 주지만 자식은 %로 작성한다. */
+		.box{width: 33.333%; height: 300px; float: left; }
+		.box1{background: green;}
+		.box2{background: yellow;}
+		.box3{background: pink;}
+		@media screen and (max-width:1200px ) {
+			/* 너비 95%, 박스 유동 바꾸기 */
+			.wrap{width: 95%} 
+			/*.box{width: 33.333%}*/
+		}
+		@media screen and (max-width:800px ) {
+			.box1{width: 100%;}
+			.box2{width: 50%;}
+			.box3{width: 50%;}
+		}
+		@media screen and (max-width:480px ) {
+			.box2{width: 100%;}
+			.box3{width: 100%;}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box1 box"></div>
+		<div class="box2 box"></div>
+		<div class="box3 box"></div>
+	</div>
+	
+</body>
+</html>
+
+
+
+

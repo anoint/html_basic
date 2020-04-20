@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	div{width: 100px; height: 100px; background: red}
+</style>
+<script>
+	$(function(){
+		/////////////
+		//1초마다 10씩증가하기
+		var timer= 0, delay= 1000;
+		timer = setInterval(make,delay);
+		function make(){
+			$("div").animate({width:"+=10"},300);
+		} 
+
+		//호버하면 멈춤, 아웃하면 다시 1초단위
+		$("div").hover(function(){
+			clearInterval(timer);
+		},function(){
+			timer = setInterval(make,delay);
+		});
+		
+		//누르면 네이버 창 띄우기
+		$("div").click(function(){
+			window.open("http://www.naver.com");
+		});
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div></div>
+</body>
+</html>
+
+
+
+
+

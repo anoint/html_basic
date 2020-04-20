@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="js/jquery.js"></script>
+	<style>
+		button{padding: 10px; font-size: 16px;}
+		.box{border: 1px solid #000; padding: 15px; width: 1200px;
+			 overflow: hidden;}
+		.box img{float: left; width: 250px; margin: 15px;}
+	</style>
+	<script>
+		$(function(){
+		////////////////////////////////////////////////////
+			//이미지가 0~7까지 출력하고 다시 0부터 롤링처리하기
+			var cnt = 0; //이미지번호
+			var imgUrl=""; //이미지주소
+			
+			$("button").eq(0).click(function(){
+				cnt++; //cnt+=1; cnt= cnt+1
+				//if조건 - 롤링 (순서 중요!)
+				/* if(cnt >7){
+					cnt = 0;
+				} */
+				cnt= cnt % 8; //나머지값에 해당하는게 0~7까지일때
+				console.log(cnt);
+				imgUrl = "images/img"+cnt+".png"
+				var img = $("<img>").attr("src", imgUrl).hide().fadeIn();
+				$(".box").append(img);
+				
+			});
+			$("button").eq(1).click(function(){
+				$(".box").empty();
+			});
+			$("button").eq(2).click(function(){
+				$(".box").remove();
+			});
+		////////////////////////////////////////////////////
+	})
+	</script>
+	
+</head>
+<body>
+	<p>
+		<button>요소생성</button>
+		<button>자식삭제</button>
+		<button>부모삭제</button>
+	</p>
+	<div class="box"></div>
+</body>
+</html>
+
+
+
+
+

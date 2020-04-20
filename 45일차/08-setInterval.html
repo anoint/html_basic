@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	div{margin: 50px; width: 300px; height: 100px;
+		border: 1px solid #000;
+		font-size: 50px; line-height: 2; text-align: center;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var count = 0, timer = 0, delay = 1000;
+		$("div").text(count);
+
+		timer = setInterval(make, delay);
+		function make(){
+			count++;
+			$("div").text(count);
+		}
+
+		$("button").eq(0).click(function(){
+			clearInterval(timer);
+		});
+		$("button").eq(1).click(function(){
+			timer = setInterval(make,delay); //시작
+		});
+
+		$("button").eq(2).hover(function(){
+			//올려,오버
+			clearInteval(timer);
+		},function(){
+			//내려,다운
+			timer = setInterval(make,delay);
+		});
+		////////////
+	});
+</script>
+	
+</head>
+<body>
+	<div></div>
+	<p>
+		<button>중지</button>
+		<button>시작</button>
+		<button>중지,시작</button>
+	</p>
+
+	<pre>
+		1. 매 시간마다 계속...
+		setInterval(함수명, 시간차)
+		function 함수명(){}
+
+		2. var 변수 = setInterval(함수명, 시간차)
+		clearInterval(변수) -> 해제
+		
+		3. setInterval(function(){
+
+		},시간차)
+
+	</pre>
+</body>
+</html>
+
+
+
+
+

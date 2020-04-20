@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css"  />
+	<link rel="stylesheet" href="css/fonts.css"  />	
+	<script src="js/jquery.js"></script> 
+	<style>
+		h2{font-size: 50px;}
+		ul li{border: 1px solid #000; width: 300px; height: 100px; 
+			  font-size: 25px; line-height: 4; text-indent: 15px;
+			  margin-bottom: 10px;}
+	</style>
+	<script>
+		$(function(){
+			/////////////////////////////////////
+			$("h2").text("갤러리000");
+			
+			$("ul li").eq(0).click(function(){
+				$("ul li").eq(0).text($("h2").text());
+				$("ul li").eq(0).css("background","yellow").css("color","green");
+				//h2가 가지고 있는 텍스트를 꺼내와라
+			});
+			$("ul li").eq(1).click(function(){
+				$("ul li").eq(1).text($("ul li").eq(0).css("color"));
+				//color만 적으면 ul li가 갖고있는 RGB값을 뽑아온다.
+			});
+			$("ul li").eq(2).click(function(){
+				$("ul li").eq(2).text($("ul li:eq(0)").css("background-color"));
+			});
+			////////////////////////////////////
+		});
+	</script>
+</head>
+<body>
+	<h2>타이틀</h2>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	table{width: 1000px; margin: auto;}
+	td{padding: 30px; border: 1px solid #000;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		$("table tr:eq(0) td:eq(0)").css("background","red")
+					.next().css("background","green")
+					.next().css("background","yellow")
+					.prev().prev().css("background","skyblue")
+					.parent().next().children().eq(1).css("background","lime")
+					.next().css("background","red")
+					.next().css("background","pink")
+					.prev().prev().prev().css("background","green")
+					.parent().next().next().children().eq(0).css("background","pink")
+					.next().next().css("background","red")
+					.end()
+					.css("background","yellow")
+					.siblings().css("background","red")
+					.parent().prev().children().eq(0).css("background","pink")
+
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<!-- table>tr*4>td*4 -->
+	<table>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
+
+

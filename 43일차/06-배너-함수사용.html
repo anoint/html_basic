@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	ul{margin: 30px;}
+	ul li{float: left; width: 30px; height: 30px;
+		  border-radius: 50%; margin: 10px; background: orange; cursor: pointer;}
+  	ul li.on{background: skyblue;}
+  	button{padding: 20px; font-size: 20px;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var cnt = 0 , imgUrl = 0 ;
+		var $li = $("ul li");
+		var $img = $(".big-img img");
+		var $prev = $("p .prev")
+		var $next = $("p .next")
+
+		$li.click(function(){
+			cnt = $(this).index();
+			imgUrl = "images/img"+cnt+".png"
+			$img.attr("src",imgUrl);
+			$img.css("opacity","0");
+			$img.animate({opacity:1},400);
+			$li.removeClass("on");
+			$li.eq(cnt).addClass("on");
+		});
+		$prev.click(function(){
+			cnt--;
+			if(cnt < 0){cnt = 4}
+			make();
+		});
+		$next.click(function(){
+			cnt++;
+			if(cnt > 4){ cnt = 0}
+			make();
+		});
+		function make(){
+			imgUrl = "images/img"+cnt+".png";
+			$img.attr("src",imgUrl).css("opacity","0").animate({opacity:1},400);
+			$li.removeClass("on");
+			$li.eq(cnt).addClass("on");
+		}
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<ul class="cf">
+		<li class="on"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<div class="big-img">
+		<img src="images/img0.png" alt="">
+	</div>
+	<p>
+		<button class="prev">이전</button>
+		<button class="next">다음</button>
+	</p>
+</body>
+</html>
+
+
+
+
+

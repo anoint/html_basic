@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	#sideMenu{position: fixed; width: 350px; height: 100%; 
+			  background: #37474f; color: #fff;
+			  right: 0;}
+	#sideMenu a{color: #fff;}
+	#sideMenu h2{font-size: 40px; padding: 50px 50px 20px 50px;}
+	#nav{padding: 10px 50px;}
+	#gnb{}
+	#gnb li{}
+	#gnb li a{display: block; height: 45px; 
+			  font-size: 18px; line-height: 45px; text-indent: 20px;
+			  border-bottom: 1px solid #dcdcdc; background: #0097a7;}
+	#gnb li ul{}
+	#gnb li ul li{}
+	#gnb li ul li a{ font-size: 16px; background: #4dd0e1; color: #fff; height: 35px; line-height: 35px;}
+	#sideMenu .closeX{position: absolute; right: 350px; top: 0;}
+	#sideMenu .closeX a{display: block; width: 50px; height: 50px; 
+						background: #000; 
+						font-size: 50px; line-height: 50px; text-align: center;
+	}
+	#sideMenu .closeX.on{}
+</style>
+<script>
+	$(function(){
+		/////////////
+		$("#gnb li ul").hide().first().show();
+
+		//MainMenu를 누르면 해당 서브메뉴가 활성화되도록 
+		$("#gnb > li > a").click(function(){
+				$(this).next().slideDown();
+				$("#gnb > li > a").not(this).next().slideUp();
+		});
+		var isPlay = $("#sideMenu .closeX").hasClass("on")
+		$("#sideMenu .closeX").click(function(){
+			if(!isPlay){
+				$("#sideMenu").animate({right:-350},500);
+				//$(this).addClass("on");
+			}else{
+				$("#sideMenu").animate({right:0},500);
+				//$(this).removeClass("on");
+			}
+			$(this).toggleClass("on");
+			isPlay = $(this).hasClass("on");
+		});
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<!-- div#sideMenu>h2{메인메뉴}+nav#nav>ul#gnb>li>a -->
+	<div id="sideMenu">
+		<h2>메인메뉴</h2>
+		<nav id="nav">
+			<ul id="gnb">
+				<li><a href="#">MainMenu1</a>
+					<!-- ul>li*5>a[href=#]{subMenu1} -->
+					<ul>
+						<li><a href="#">subMenu1</a></li>
+						<li><a href="#">subMenu1</a></li>
+						<li><a href="#">subMenu1</a></li>
+						<li><a href="#">subMenu1</a></li>
+						<li><a href="#">subMenu1</a></li>
+					</ul>
+				</li>
+				<li><a href="#">MainMenu2</a>
+					<ul>
+						<li><a href="#">subMenu2</a></li>
+						<li><a href="#">subMenu2</a></li>
+						<li><a href="#">subMenu2</a></li>
+						<li><a href="#">subMenu2</a></li>
+						<li><a href="#">subMenu2</a></li>
+					</ul>
+				</li>
+				<li><a href="#">MainMenu3</a>
+					<ul>
+						<li><a href="#">subMenu3</a></li>
+						<li><a href="#">subMenu3</a></li>
+						<li><a href="#">subMenu3</a></li>
+						<li><a href="#">subMenu3</a></li>
+						<li><a href="#">subMenu3</a></li>
+					</ul>
+				</li>
+				<li><a href="#">MainMenu4</a>
+					<ul>
+						<li><a href="#">subMenu4</a></li>
+						<li><a href="#">subMenu4</a></li>
+						<li><a href="#">subMenu4</a></li>
+						<li><a href="#">subMenu4</a></li>
+						<li><a href="#">subMenu4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">MainMenu5</a>
+					<ul>
+						<li><a href="#">subMenu5</a></li>
+						<li><a href="#">subMenu5</a></li>
+						<li><a href="#">subMenu5</a></li>
+						<li><a href="#">subMenu5</a></li>
+						<li><a href="#">subMenu5</a></li>
+					</ul>
+				</li>
+				<li><a href="#">MainMenu6</a>
+					<ul>
+						<li><a href="#">subMenu6</a></li>
+						<li><a href="#">subMenu6</a></li>
+						<li><a href="#">subMenu6</a></li>
+						<li><a href="#">subMenu6</a></li>
+						<li><a href="#">subMenu6</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<!-- p.closeX>a[href=#]{X} -->
+		<p class="closeX"><a href="#">X</a></p>
+	</div>
+</body>
+</html>
+
+
+
+
+

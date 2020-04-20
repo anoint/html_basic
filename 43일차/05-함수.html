@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+</style>
+<script>
+	$(function(){
+		/////////////
+		function sum(){
+			var num1 = 10;
+			var num2 = 30;
+			var result = 0;
+			result = num1 + num2;
+			document.write("합:" + result +"<br/>");
+		}
+		function sub(){
+			var num1 = 10, num2 = 30, result = 0;
+			result = num1 - num2;
+			document.write("차:"+ result+"<br/>");
+		}
+		function mul(){
+			var num1 = 10, num2 = 30, result = 0;
+			result = num1 * num2;
+			document.write("곱:"+ result+"<br/>");
+		}
+		function div(){
+			var num1 = 10, num2 = 30, result = 0;
+			result = num1 / num2;
+			document.write("나누기:" + result+"<br/>");
+		}
+		function mod(){
+			var num1 = 10, num2 = 30, result = 0;
+			result = num1 % num2;
+			document.write("나머지:" + result+"<br/>");
+		}
+		sum();
+		sub();
+		mul();//곱
+		div();//나누기
+		mod();//나머지
+		//불러오려면 무조건 함수가 함께 와야한다. 함수는 여러개 써놔도 문제없지만 호출부분은 함수없이 적어놓으면 오류나서 안뜬다.
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	
+</body>
+</html>
+
+
+
+
+

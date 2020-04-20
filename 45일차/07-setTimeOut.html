@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+</style>
+<script>
+	$(function(){
+		/////////////
+		/* setTimeout(make,3000);
+		function make(){
+			alert("3초후 한번만 실행");
+		} */
+		setTimeout(function(){
+			alert("3초후 한번만 실행");
+		},3000)
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<pre>
+		1. setTimeout("함수명", 시간차) -1초 1000
+			오직 한번만 실행
+		2. setTimeout(funciton(){
+			자가함수, 콜백함수
+		},시간차);
+	</pre>
+</body>
+</html>
+
+
+
+
+

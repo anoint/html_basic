@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<style>
+	.wrap{width: 1000px; height: 576px; position: relative;}
+	.banner{}
+	.banner li{width: 1000px; height: 576px; position: absolute; left: 0; top: 0;}
+	.wrap .paging{position: absolute; right: 30px; top: 20px;}
+	.wrap .paging li{ width: 30px; height: 30px; background: yellow; 
+					  font-size: 20px; line-height: 30px; text-align: center;
+					  border: 1px solid #000; float: left; margin-right: 10px;}
+	.wrap .paging li.on{background: skyblue; color: #fff;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		//같은걸 다시한번 누르면 그대로 있지 않고 다시 반응하기때문에 현재와 과거 둘로 나눈다.
+		var current = 0; //현재번호
+		var old = 0;//과거번호(끝난아이)
+		
+		$(".banner li").css("opacity","0").first().css("opacity","1");
+		$(".paging li").click(function(){
+			current = $(this).index(); //현재
+			if(current != old){ //현재와 과거가 다르면 처리하기
+				$(".banner li").eq(old).css("opacity","0");
+				$(".banner li").eq(current).animate({opacity:1},400);
+				$(".paging li").removeClass("on");
+				$(".paging li").eq(current).addClass("on");
+			
+				old = current;
+			}
+		});
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<!-- div.wrap>ul.banner>li*5>img[src=images/img.png]^^ul.paging>li*5 -->
+	<div class="wrap">
+		<ul class="banner">
+			<li><img src="images/img0.png" alt=""></li>
+			<li><img src="images/img1.png" alt=""></li>
+			<li><img src="images/img2.png" alt=""></li>
+			<li><img src="images/img3.png" alt=""></li>
+			<li><img src="images/img4.png" alt=""></li>
+		</ul>
+		<ul class="paging">
+			<li class="on">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+

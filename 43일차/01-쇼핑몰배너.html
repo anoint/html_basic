@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>배너만들기</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="fa/css/fontawesome-all.min.css"  />
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<style>
+	  .banner{width: 870px;height: 398px; margin: auto;
+	  		border: 1px solid #000;}
+	  		
+	  .banner ul{width:2320px;position: relative;}
+	  .banner ul li{float: left;width: 290px; height: 398px;font-size: 100px; line-height: 398px;text-align: center;}
+	  .banner ul li:nth-child(1){background: #C5E1A5;	}
+	  .banner ul li:nth-child(2){background: #81C784;	}
+	  .banner ul li:nth-child(3){background: #CDDC39;	}
+	  .banner ul li:nth-child(4){background: #64FFDA;	}
+	  .banner ul li:nth-child(5){background: #40C4FF;	}
+	  .banner ul li:nth-child(6){background: #FF9800;	}
+	  .banner ul li:nth-child(7){background: #FF5722;	}
+	  .banner ul li:nth-child(8){background: #FFFF00;	}
+	  /* background로 들어가면 움직이지 않는다. 배너 만들떈 무조건 img로 해야함*/
+	</style>
+<script>
+	$(function(){
+		/////////////
+		var first="", last="";
+		var $next = $(".next");
+		var $prev = $(".prev");
+		var $ul = $(".banner ul");
+		var $li = $(".banner ul li") //-> 이건 한번만 정의되는거라X ($li값이 바뀌기 때문에 아래에 적용이 되지 않는다.)
+		
+		last = $(".banner ul li").last();
+		$ul.prepend(last);
+		$ul.css({marginLeft: "-=290"});
+		//맨마지막을 앞에 붙이고 290만큼 이동시키기
+
+		$next.click(function(){
+			$ul.animate({marginLeft:"+=290"},400,function(){
+				last = $(".banner ul li:last");  //li중 마지막 
+				$ul.prepend(last);  //앞으로 붙여준다.
+				$ul.css({marginLeft:"-=290"}); //새로 바뀌는 li이 육안으로 보이지 않도록 앞으로 290씩 오게 만듬
+			});
+		});
+		$prev.click(function(){
+			$(".banner ul").animate({marginLeft:"-=290"},400,function(){
+				first = $(".banner ul li:first");
+				$ul.append(first);
+				$ul.css({marginLeft:"+=290"});
+			});
+		});
+		
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<p>
+		<button class="prev">이전</button>
+		<button class="next">다음</button>
+	</p>
+	
+	<div class="banner">
+		<ul class="cf">
+			<li>01</li>
+			<li>02</li>
+			<li>03</li>
+			<li>04</li>
+			<li>05</li>
+			<li>06</li>
+			<li>07</li>
+			<li>08</li>			 
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+

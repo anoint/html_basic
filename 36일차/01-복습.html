@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css"  />
+	<link rel="stylesheet" href="css/fonts.css"  />	
+	<script src="js/jquery.js"></script> 
+	<style>
+		div{width: 600px; height: 80px; border: 1px solid #000;
+			margin-bottom: 10px;}
+	</style>
+	<script>
+		$(function(){
+			/////////////////////////////////////
+			//document.write("<h1>제목1</h1>");
+			//한 줄 주석문
+			/*document.write("<h2>제목2</h2>");
+			document.write("<h3>제목3</h3>");
+			alert("경고메세지");*/
+			/*두 줄 이상의 주석문
+			  두 줄 이상의 주석문*/
+
+			$("div:first").css("background","yellow");
+			$("div").eq(0).css("background","skyblue")
+						  .css("font-size","30px")
+						  .css("text-indent","20px");
+		    $("div").eq(1).css({"background":"green","color":"red","font-size":"60px","text-indent":"20px"});
+			$("div:eq(2)").css({"font-size":"50px","text-align":"center","font-weight":"bold","color":"aqua","background":"#000"});
+			$("div").eq(3).css("background","violet").css("text-indent","50px").css("color","#ff0").css({"background":"lightblue","font-size":"30px"});
+			$("div:odd").css("background","pink").css("font-size","30px");
+			$("div:even").css("background","green").css("font-size","50px");
+			$("div").eq(5).css("background","red").css("color","green").css("text-align","center").css("font-size","80px");
+			////////////////////////////////////
+		})
+	</script>
+</head>
+<body>
+	<div>안녕하세요</div>
+	<div>안녕하세요</div>
+	<div>안녕하세요</div>
+	<div>안녕하세요</div>
+	<div>안녕하세요</div>
+	<div>안녕하새우</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

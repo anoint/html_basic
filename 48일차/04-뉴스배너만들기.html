@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	.inner{width: 1200px; margin: auto; position: relative;}
+	.inner .box{width: 600px; padding: 15px;
+				border: 1px solid #f00;}
+	.inner .box ul{}
+	.inner .box ul li{width: 600px; height: 60px; font-size: 16px; border-bottom: 1px solid #dcdcdc; line-height: 60px;}
+	.inner .box p{text-align: center; margin-top: 10px;}
+	.inner .view{width: 700px; border-color: #000;}
+	.inner .view ul{width: 600px; float: left; height: 60px; overflow: hidden; position: relative;}
+	.inner .view ul li{position: absolute; border-bottom: none; left: 0; top: -60px;}
+	.inner .view ul li:first-child{top: 0;}
+	.inner .news{position: absolute; left: 0; top: 0; background: #fff; display: none;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var current = 0, old = 0, timer = 0, delay = 2000;
+		var $news = $(".inner .news");
+		var $viewli = $(".inner .view ul li");
+		var size = $viewli.length;
+		
+		timer = setInterval(make,delay);
+		function make(){
+			current++;
+			if(current > size-1){current = 0}
+			banner();
+		};
+		function banner(){
+			$viewli.eq(current).stop().css({top:60}).animate({top:0},300);
+			$viewli.eq(old).stop().css({top:0}).animate({top:-60},400);
+			old = current;
+		};
+
+		$(".view p").click(function(){
+			$news.show();
+		});
+		$(".news p").click(function(){
+			$news.hide();
+		});
+
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div class="inner">
+		<!-- div.view>ul>li{01. 뉴스입니다.}*10^p.open>img -->
+		<div class="view box cf">
+			<ul>
+				<li>01. 뉴스입니다.</li>
+				<li>02. 뉴스입니다.</li>
+				<li>03. 뉴스입니다.</li>
+				<li>04. 뉴스입니다.</li>
+				<li>05. 뉴스입니다.</li>
+				<li>06. 뉴스입니다.</li>
+				<li>07. 뉴스입니다.</li>
+				<li>08. 뉴스입니다.</li>
+				<li>09. 뉴스입니다.</li>
+				<li>10. 뉴스입니다.</li>
+			</ul>
+			<p class="open"><img src="뉴스배너/images/arrow_down.jpg" alt=""></p>
+		</div>
+		<div class="news box cf">
+			<ul>
+				<li>01. 뉴스입니다.</li>
+				<li>02. 뉴스입니다.</li>
+				<li>03. 뉴스입니다.</li>
+				<li>04. 뉴스입니다.</li>
+				<li>05. 뉴스입니다.</li>
+				<li>06. 뉴스입니다.</li>
+				<li>07. 뉴스입니다.</li>
+				<li>08. 뉴스입니다.</li>
+				<li>09. 뉴스입니다.</li>
+				<li>10. 뉴스입니다.</li>
+			</ul>
+			<p class="open"><img src="뉴스배너/images/arrow_up.jpg" alt=""></p>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+

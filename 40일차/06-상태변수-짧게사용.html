@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+<style>
+	div{margin: 50px; width: 200px; height: 100px; 
+		font-size: 50px; line-height: 2; text-align: center;
+		border: 1px solid #000; background: yellow;
+		cursor: pointer;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		//div를 누르면 닫힘, 색은 그린으로 처리
+		//하나가지고 두가지의 결과를 출력 할 때 -> 상태변수 사용
+		var isPlay = true; //열린상태
+		$("div").click(function(){
+			if(isPlay){
+				$(this).text("닫힘").css("background","green");
+			} else {
+				$(this).text("열림").css("background","yellow");
+			}
+			isPlay = !isPlay;
+			console.log(isPlay);
+		});
+		//??? 다시 누르면 원래대로 만들기
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div>열림</div>
+
+	<pre>
+		상태변수 : 현재 상태를 저장해두는 것(방식)
+				   예) true(양수) / false(음수)
+				   true -> 진행, 활성, 열림..
+				   false -> 중단, 닫힘, 비활성..
+		+ 판단해주는건 if문
+			.hasClass: 클래스 붙어있다 true
+					   클래스 떼어졌다 false
+	</pre>
+	<pre>
+		var isPlay = true
+		.click(){
+   			if(isPlay){ //if(isPlay == true)
+   						//if(isPlay == false) ->if(!isPlay)
+   				} else { 
+   				}
+   			isPlay = !isPlay
+		}
+	</pre>
+</body>
+</html>
+
+
+
+
+

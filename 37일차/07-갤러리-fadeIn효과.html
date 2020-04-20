@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css"  />
+	<link rel="stylesheet" href="css/fonts.css"  />	
+	<script src="js/jquery.js"></script> 
+	<style>
+		button{border:none; background: #dcdcdc;
+			   width: 30px; height: 30px; border-radius: 50%;}
+	</style>
+	<script>
+		$(function(){
+			/////////////////////////////////////
+			var imgUrl="" , cnt = 0; //imgUrl - 주소 , cnt - 번호 담을 변수선언
+			$("button").eq(0).click(function(){
+				cnt = $(this).index();
+				imgUrl = "images/img"+cnt+".jpg";
+				$(".box img").attr("src", imgUrl);
+				$(".box img").hide();
+				$(".box img").fadeIn();
+			});
+			$("button").eq(1).click(function(){
+				cnt = $(this).index();
+				imgUrl = "images/img"+cnt+".jpg";
+				$(".box img").attr("src", imgUrl);
+				$(".box img").hide();
+				$(".box img").fadeIn();
+			});
+			$("button").eq(2).click(function(){
+				cnt = $(this).index();
+				imgUrl = "images/img"+cnt+".jpg";
+				$(".box img").attr("src", imgUrl);
+				$(".box img").hide();
+				$(".box img").fadeIn();
+			});
+			$("button").eq(3).click(function(){
+				cnt = $(this).index();
+				imgUrl = "images/img"+cnt+".jpg";
+				$(".box img").attr("src",imgUrl);
+				$(".box img").hide();
+				$(".box img").fadeIn();
+			});
+			$("button").eq(4).click(function(){
+				cnt = $(this).index();
+				imgUrl = "images/img"+cnt+".jpg";
+				$(".box img").attr("src",imgUrl);
+				$(".box img").hide();
+				$(".box img").fadeIn();
+			});
+			//$("button").click(function(){});
+			////////////////////////////////////
+		})
+	</script>
+</head>
+<body>
+	<p>
+		<button>1</button>
+		<button>2</button>
+		<button>3</button>
+		<button>4</button>
+		<button>5</button>
+	</p>
+	<div class="box">
+		<img src="images/img4.jpg" alt="">
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

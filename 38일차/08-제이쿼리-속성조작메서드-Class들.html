@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제이쿼리</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="js/jquery.js"></script>
+	<style>
+		div{width: 800px; height: 400px; 
+			background: red;}
+		.on{width: 400px; height: 400px; 
+			background: orange; 
+			border-radius: 50%; border: 5px dotted #000;}
+	</style>
+	<script>
+		$(function(){
+		////////////////////////////////////////////////////
+			//대상.addClass("클래스명")
+			$("button").eq(0).click(function(){
+				$("div").addClass("on");
+			});
+			$("button").eq(1).click(function(){
+				$("div").removeClass("on");
+			});
+			$("button").eq(2).click(function(){
+				$("div").toggleClass("on");
+			});
+			$("button").eq(3).click(function(){
+				var a = $("div").hasClass("on");
+				//div에 클래스 on 붙어있는지 떼어졌는지 true/false
+				// + if문 (같이 쓰임)
+				$("div").text(a);
+			});
+		////////////////////////////////////////////////////
+	})
+	</script>
+	
+</head>
+<body>
+	<div></div>
+	<p>
+		<button>addClass</button>
+		<button>removeClass</button>
+		<button>toggleClass</button>
+		<button>hasClass</button>
+	</p>
+</body>
+</html>
+
+
+
+
+

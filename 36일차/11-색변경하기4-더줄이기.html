@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css"  />
+	<link rel="stylesheet" href="css/fonts.css"  />	
+	<script src="js/jquery.js"></script> 
+	<style>
+		body{width: 1000px; margin: auto;}
+		.color-box{width: 600px; height: 400px; margin-bottom: 10px;
+				   border: 1px solid #000; font-size: 100px; line-height: 4;
+				   text-align: center;
+				  }
+		button{padding: 8px; font-size: 16px;}
+	</style>
+	<script>
+		$(function(){
+			/////////////////////////////////////
+			var bgColor = "";
+			/* $("button").eq(0).click(function(){
+				bgColor = $(this).text();
+				$(".color-box").css("background", bgColor)
+							   .text(bgColor);
+				//버튼과 동일한 색, 버튼의 텍스트값을 칼라박스의 텍스트로 출력하기
+			});
+			$("button").eq(1).click(function(){
+				bgColor = $(this).text();
+				$(".color-box").css("background", bgColor)
+							   .text(bgColor);
+			});
+			$("button").eq(2).click(function(){
+				bgColor = $(this).text();
+				$(".color-box").css("background", bgColor)
+							   .text(bgColor);
+			});
+			$("button").eq(3).click(function(){
+				bgColor = $(this).text();
+				$(".color-box").css("background", bgColor)
+							   .text(bgColor);
+			});
+			$("button").eq(4).click(function(){
+				bgColor = $(this).text();
+				$(".color-box").css("background", bgColor)
+							   .text(bgColor);
+			}); */
+			$("button").click(function(){
+				bgColor = $(this).text();
+				$(".color-box").css("background", bgColor)
+							   .text(bgColor);
+			});
+			////////////////////////////////////
+		})
+	</script>
+</head>
+<body>
+	<div class="color-box">
+		무슨색
+	</div>
+	<p>
+		<button>green</button>
+		<button>yellow</button>
+		<button>red</button>
+		<button>blue</button>
+		<button>pink</button>
+		<button>#336699</button>
+		<button>coral</button>
+		<button>lime</button>
+	</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

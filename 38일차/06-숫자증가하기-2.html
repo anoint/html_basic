@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>if문사용하여 한계두기</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<script src="js/jquery.js"></script>
+	<style>
+		div{border-bottom: 1px solid #000;
+		width: 500px; height: 100px; font-size: 50px; line-height: 2; text-align: center;}
+		button{padding: 15px; font-size: 20px;}
+	</style>
+	<script>
+		$(function(){
+		////////////////////////////////////////////////////
+			var count = 0;
+			$("div").text(count);
+			$(".next").click(function(){
+				count ++ ;
+				if(count > 10){
+					count = 0
+				}
+				$("div").text(count);
+			});
+			$(".prev").click(function(){
+				count -- ;
+				if(count < 0){
+					count = 10;
+				}
+				$("div").text(count);
+			});
+			/* 롤링
+				1. 증가/감소
+				2. 조건 : if (변수>= 값){변수=초기값}
+				3. 결과 */
+
+		////////////////////////////////////////////////////
+	})
+	</script>
+	
+</head>
+<body>
+	<div></div>
+	<p>
+		<button class="prev">이전</button>
+		<button class="next">다음</button>
+	</p>
+</body>
+</html>
+
+
+
+
+

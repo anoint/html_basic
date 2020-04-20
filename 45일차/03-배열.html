@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	.box{width: 600px; height: 100px; border: 1px solid #000;
+		 margin-left: 20px; text-indent: 20px; font-size: 50px; line-height: 2;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var cnt = 0;
+		var arr = []
+		arr[0] = "유재석";
+		arr[1] = "박서준";
+		arr[2] = "성효진";
+		arr[3] = "조은비";
+		arr[4] = "강남이";
+
+		$("button").click(function(){
+			cnt = $(this).index();
+			$(".box").text(arr[cnt]);
+		});
+		/*
+		$("button").eq(0).click(function(){
+			$(".box").text("유재석");
+		});
+		$("button").eq(1).click(function(){
+			$(".box").text("박서준");
+		});
+		$("button").eq(2).click(function(){
+			$(".box").text("송효진");
+		});
+		$("button").eq(3).click(function(){
+			$(".box").text("조은비");
+		});
+		$("button").eq(4).click(function(){
+			$(".box").text("강남이");
+		});
+		*/
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div class="box"></div>
+	<p>
+		<button>확인1</button>
+		<button>확인2</button>
+		<button>확인3</button>
+		<button>확인4</button>
+		<button>확인5</button>
+	</p>
+</body>
+</html>
+
+
+
+
+

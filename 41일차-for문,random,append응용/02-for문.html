@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<style>
+</style>
+<script>
+	$(function(){
+		/////////////
+		var dan = prompt("단을 입력하세요.");
+		var result = 0; //결과
+		dan = parseInt(dan);
+		/*  <문제>
+			2 X 1 = 2
+			2 X 2 = 4
+			2 X 3 = 6
+			~
+			2 X 9 = 18 
+		*/
+		for(var i = 1 ; i <= 9 ; i++){
+			result = dan*i
+			document.write(dan + "X" + i + "=" +result+"<br/>")
+		}
+
+		/* <문제>
+		   1 2 3 4 5 6 7 8 9 10
+		  11 12 ~            20
+		  21 ~               30
+		  91 ~               100
+		*/
+		/* for(var i = 1 ; i <= 100 ; i++ ){
+			document.write(i+"&nbsp");
+			if(i % 10 == 0){
+				document.write("<br/>");
+			}
+			document.write("최종값:"+ i);
+		} */
+
+		//2. 1부터 100까지 중에서 5의 배수를 출력하세요 for, if문
+		/* for(var i = 1 ; i <= 100 ; i++ ){
+			if(i % 5 == 0){
+				document.write(i+"&nbsp;&nbsp");
+			}
+		} //end for
+		document.write("최종값:"+ i); */
+
+		//1. 1부터 30까지 중에서 짝수만 출력하세요 for, if문
+		/* for(var i = 1 ; i <= 30 ; i++ ){
+			if(i % 2 == 0){
+				document.write(i+"&nbsp;&nbsp");
+			}
+		} //end for
+		document.write("최종값:"+ i); */
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	
+</body>
+</html>
+
+
+
+
+

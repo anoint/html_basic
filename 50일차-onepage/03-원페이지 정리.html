@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	#wrap{width: 100%; min-width: 1600px;}
+	#header{width: 100%;}
+	#header.on{position: fixed; z-index: 100; background: #fff;} /*포지션 없으면 안먹음*/
+	#header .inner-1180{width: 1180px; height: 150px; position: relative; margin: auto;}
+	#header h1{position: absolute; left: 0; top: 50px;}
+	#nav{position: absolute; right: 0; top: 60px;}
+	#gnb{}
+	#gnb li{float: left; margin-left: 60px;}
+	#gnb li a{display: block; font-size: 20px; text-transform: uppercase;}
+	#container{height: 100%;}
+	#container:after{content: ''; display: block; clear: both;}
+	.content-wrap{width: 100%; padding: 80px 0;}
+	.content-wrap .inner{width: 1180px; margin: auto;}
+	.content-wrap .inner h2{font-size: 40px; text-align: center;
+							margin-bottom: 50px;}
+	#con0{background: #def3ff;}
+	#con0 .box{width: 100%; height: 700px; background: #006abc}
+
+	#con1{background: #ace1ff;}
+	#con1 .box{}
+	#con1 .box ul{}
+	#con1 .box ul li{float: left; width: 25%; height: 600px; box-sizing: border-box; padding: 20px; font-size: 30px; position: relative;}
+	#con1 .box ul li:nth-child(1){background: #6cd7b9}
+	#con1 .box ul li:nth-child(2){background: #37c39f}
+	#con1 .box ul li:nth-child(3){background: #00a47b}
+	#con1 .box ul li:nth-child(4){background: #00865f}
+	#con2{background: #71cdff;}
+	#con2 .box{}
+	#con2 .box ul{}
+	#con2 .box ul li{float: left; width: 50%; height: 650px; 
+					 font-size: 30px; color: #fff; box-sizing: border-box; 
+					 padding: 20px; position: relative;}
+	#con2 .box ul li:nth-child(1){background: #ddc8fe}
+	#con2 .box ul li:nth-child(2){background: #9b57ff}
+	#con3{background: #2bb9fc;}
+	#con3 .box{width: 100%; height: 800px; background: #b9e0fe;}
+	#con4{background: #009bf4;}
+	#con4 .box{width: 100%; height: 1000px; background: #b9e0fe;}
+	.nav{position: fixed; right: 50px; top: 43%;}
+	.nav ul{}
+	.nav ul li{width: 25px; height: 25px; background: violet;
+				border-radius: 50%; margin-bottom: 15px;}
+	.nav ul li.on{background: pink;}
+	.bottomM{position: fixed; left: 85%; bottom: 0;}
+	.bottomM a{display: block; width: 50px; height: 50px;
+			   background: #000; color: #fff; 
+			   text-align: center; font-size: 25px; line-height: 2;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var arrY = []
+		for(var i = 0; i <= 4; i++){
+			arrY[i] = $("#con"+i).offset().top;
+		}
+		$("#con1 .box ul li").css({opacity:0, top:-100})
+		$("#con2 .box ul li").eq(0).css({opacity:0, top:-200})
+		$("#con2 .box ul li").eq(1).css({opacity:0, top:200})
+		$(".nav").hide();
+		$(".bottomM").hide();
+		var top = 0;
+		var cnt = 0;
+
+		$(".nav li").click(function(){
+			cnt = $(this).index();
+			$("html,body").animate({
+				scrollTop: arrY[cnt]
+			},800)
+			$(".nav li").removeClass("on");
+			$(".nav li").eq(cnt).addClass("on");
+		});
+		$(".bottomM").click(function(){
+			var targetY = $("#top").offset().top;
+			$("html,body").animate({
+				scrollTop: targetY
+			},300)
+			return false;
+		})
+		$("#gnb li a").click(function(){
+			var href = $(this).attr("href");
+			var targetY = $(href).offset().top;
+			$("html,body").animate({
+				scrollTop: targetY
+			},800)
+			return false; //링크막아주기
+		})
+		$(window).scroll(function(){
+			top = $(window).scrollTop();
+			for(var i = 0; i <=4; i++){
+				if(top >= arrY[i]){
+				$(".nav li").removeClass("on");
+				$(".nav li").eq(i).addClass("on");
+				}
+			}
+			if(top > 100){
+				$(".nav").fadeIn();
+				$(".bottomM").fadeIn();
+			}else{
+				$(".nav").fadeOut();
+				$(".bottomM").fadeOut();
+			}
+			if(top > arrY[1]-400){ //스크롤바 위치로 판단, 경계선보다 위에서 나와야하니 -수치 기입
+				for(var i = 0; i < 4 ; i++){
+					$("#con1 .box ul li").eq(i).delay(i*200).animate({opacity:1, top:0},500)
+				}
+			}
+			if(top > arrY[2]-400){
+				for(var i = 0; i < 4 ; i++){
+					$("#con2 .box ul li").eq(i).animate({opacity:1, top:0},500)
+				}
+			}
+		});
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div id="top" class="hide">맨위</div>
+	<div id="wrap">
+		<header id="header">
+			<div class="inner-1180">
+				<h1><a href="#"><img src="http://placehold.it/100x50" alt=""></a></h1>
+				<nav id="nav">
+					<ul id="gnb">
+						<li><a href="#con0">MainMenu1</a></li>
+						<li><a href="#con1">MainMenu2</a></li>
+						<li><a href="#con2">MainMenu3</a></li>
+						<li><a href="#con3">MainMenu4</a></li>
+						<li><a href="#con4">MainMenu5</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- #container>section.content-wrap#con$*4>div.inner>h2{title}+div.box -->
+		<div id="container">
+			<section class="content-wrap" id="con0">
+				<div class="inner">
+					<h2>title1</h2>
+					<div class="box"></div>
+				</div>
+			</section>
+			<section class="content-wrap" id="con1">
+				<div class="inner">
+					<h2>title2</h2>
+					<div class="box cf">
+						<ul>
+							<li>
+								<p>01</p>
+							</li>
+							<li>
+								<p>01</p>
+							</li>
+							<li>
+								<p>01</p>
+							</li>
+							<li>
+								<p>01</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="content-wrap" id="con2">
+				<div class="inner">
+					<h2>title3</h2>
+					<div class="box cf">
+						<ul>
+							<li>
+								<h3>제목</h3>
+							</li>
+							<li>
+								<h3>제목</h3>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="content-wrap" id="con3">
+				<div class="inner">
+					<h2>title4</h2>
+					<div class="box">
+					</div>
+				</div>
+			</section>
+			<section class="content-wrap" id="con4">
+				<div class="inner">
+					<h2>title5</h2>
+					<div class="box"></div>
+				</div>
+			</section>
+
+		</div>
+	</div>
+	<p class="bottomM"><a href="#top">▲</a></p>
+	<div class="nav">
+		<ul>
+			<li class="on"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+

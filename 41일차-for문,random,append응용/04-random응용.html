@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<style>
+</style>
+<script>
+	$(function(){
+		/////////////
+		var ran = 0; totalImg = 8; msg = "", imgUrl="";
+
+		ran = Math.random() * totalImg;
+		ran = Math.floor(ran);
+		console.log(ran); //F12
+		imgUrl = "images/img"+ran+".png";
+		$(".gallery img").attr("src", imgUrl);
+		$("p").text(imgUrl);
+
+		//.gallery를 클릭하면 이미지를 랜덤으로 바꾸기
+		$(".gallery").click(function(){
+			ran = Math.random() * totalImg;
+			ran = Math.floor(ran);
+			imgUrl = "images/img"+ran+".png";
+			$(".gallery img").attr("src", imgUrl);
+			$("p").text(imgUrl);
+		}); //위에 적혀있다고 같이 반응되지 않음, 다시 적어줘야함
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div class="gallery">
+		<img src="images/img0.png" alt="">
+	</div>
+	<p>??????</p>
+</body>
+</html>
+
+
+
+
+

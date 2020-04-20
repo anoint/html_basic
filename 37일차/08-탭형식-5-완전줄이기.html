@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css"  />
+	<link rel="stylesheet" href="css/fonts.css"  />	
+	<script src="js/jquery.js"></script> 
+	<style>
+		.inner{width: 1000px; margin: auto;}
+		.inner ul{}
+		.inner ul li{float: left; width: 120px; height: 60px;
+					 font-size: 18px; line-height: 60px; text-align: center;
+					 border: 1px solid #000; background: yellow; cursor: pointer;}
+		.con-box{width: 1000px; height: 500px; position: relative;}
+		.con-box h3 {padding: 30px; font-size: 50px;}
+		.con-box p {padding: 0 30px; font-size: 18px;}
+		.con-box div{width: 1000px; height: 500px; position: absolute;}
+		.con-box .box0{background: #ffb300;}
+		.con-box .box1{background: #fff9c4;}
+		.con-box .box2{background: #ffab91;}
+		.con-box .box3{background: #b0bec5;}
+		.con-box .box4{background: #18ffff;}
+	</style>
+	<script>
+		$(function(){
+			/////////////////////////////////////
+			var cnt = 0;
+			var $div = $(".con-box div");
+			var $li = $(".inner ul li");
+			$div.hide().first().show();
+			$li.click(function(){
+				cnt = $(this).index();
+				$div.hide()
+				$div.eq(cnt).show();
+				//$(".con-box .box"+cnt).show();
+			});
+
+
+			////////////////////////////////////
+		})
+	</script>
+</head>
+<body>
+	<!-- .inner>ul.cf>li{제목$}*5 -->
+	<div class="inner">
+		<ul class="cf">
+			<li>제목1</li>
+			<li>제목2</li>
+			<li>제목3</li>
+			<li>제목4</li>
+			<li>제목5</li>
+		</ul>
+	<!-- .con-box>.box$*4>h3{타이틀$}+p{내용입니다.} -->
+		<div class="con-box">
+			<div class="box0">
+				<h3>타이틀1</h3>
+				<p>내용입니다.</p>
+			</div>
+			<div class="box1">
+				<h3>타이틀2</h3>
+				<p>내용입니다.</p>
+			</div>
+			<div class="box2">
+				<h3>타이틀3</h3>
+				<p>내용입니다.</p>
+			</div>
+			<div class="box3">
+				<h3>타이틀4</h3>
+				<p>내용입니다.</p>
+			</div>
+			<div class="box4">
+				<h3>타이틀5</h3>
+				<p>내용입니다.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

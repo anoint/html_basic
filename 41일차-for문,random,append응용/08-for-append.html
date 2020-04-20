@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<style>
+	.inner{width: 1200px; margin: auto;}
+	.inner ul{}
+	.inner ul li{
+		width: 350px; padding: 10px; border: 1px solid #dcdcdc;
+		margin: 10px; float: left;
+	}
+	.inner ul li img{width: 350px;}
+	.inner ul li h3{font-size: 18px; margin: 15px 0;}
+	.inner ul li p{font-size: 16px;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		//li, h3, p 생성해서 출력하기 총이미지 개수만큼
+		/* for(var i = 0; i <= 7, i++){
+			var li = $("<li>");
+			var img = $("<img>").attr("src","images/img"+i+".png");
+			var h3 = $("<h3>").text("gallery0");
+			var p = $("<p>").text("설명입니다.");
+
+			$("ul").append(li);
+			$("li").append(img);
+			$("li").append(h3);
+			$("li").append(p);
+		} 내버전 */
+			for(var i = 0 ; i <= 7; i++){
+				var li = $("<li>");
+				var img = $("<img>").attr("src","images/img"+i+".png");
+				var h3 = $("<h3>").text("gallery"+i);
+				var p = $("<p>").text("설명입니다.");
+				
+				li.append(img,h3,p);
+				$("ul").append(li);
+				var imgUrl = "images/img"+i+".png";
+			}
+
+
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<!-- .inner>ul.cf>li>img+h3+p -->
+	<div class="inner">
+		<ul class="cf">
+			<!-- <li>
+				<img src="images/img0.png" alt="">
+				<h3>gallery0</h3>
+				<p>설명입니다.</p>
+			</li> -->
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+

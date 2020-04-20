@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>상태변수</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	div{width: 500px; height: 400px; background: red;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		var isPlay = false;
+		$("button").click(function(){
+			if(!isPlay){ //if(isPlay == false)
+				$("div").css("background","blue");
+			}else{
+				$("div").css("background","red");
+			}
+			isPlay = !isPlay;
+		});
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<button>색변경</button>
+	<div></div>
+	<pre>
+		1.상태변수
+		isPlay = true / false => if문과 함께 사용
+		2. hasClass (상태변수의 고급버전)
+			=> 클래스 붙어이다 : true
+			   클래스 뗴어있다 : false
+	</pre>
+</body>
+</html>
+
+
+
+
+

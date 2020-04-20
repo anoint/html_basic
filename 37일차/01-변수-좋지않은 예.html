@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>변수의 좋지 않은 예</title>
+	<link rel="stylesheet" href="css/reset.css"  />
+	<link rel="stylesheet" href="css/fonts.css"  />	
+	<script src="js/jquery.js"></script> 
+	<style>
+
+	</style>
+	<script>
+		var num = 30; //전역변수
+		$(function(){
+			/////////////////////////////////////
+			var cnt = 20; //지역변수
+			var name = "홍길동";
+			var name = "강호동";
+			var name = "김철수";
+			var name = "김영희";
+			document.write(name);
+			//모든 코드는 위에서 아래로 진행된다. (맨 아래 적히는게 맨 위에 오게 된다.)
+			/* 기존껄 부수고 새로운 name 변수를 만들라는 의미임. => 좋지 않다. 메모리 낭비됨 
+			   => 한번 선언했으면 같은 이름으로 변수 만들지 않는다! */
+			////////////////////////////////////
+		})
+	</script>
+</head>
+<body>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

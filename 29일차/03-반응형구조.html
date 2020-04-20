@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>		
+		div{width: 1000px; height: 400px; margin: auto;
+			background: red;}
+		/* PC를 기준으로 작업한다. */
+		@media screen and (max-width: 1200px) {
+			div{width: 95%; background: yellow;}
+			}
+		@media screen and (max-width: 800px) {
+			div{background: skyblue;}
+		}
+		/* 위에서부터 상속받기 때문에 같은 값은 안적어 줘도 된다. */
+		@media screen and (max-width: 480px) {
+			div{background: green;}
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	
+</body>
+</html>
+
+
+
+

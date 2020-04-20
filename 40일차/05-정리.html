@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	div{width: 500px; height: 100px; margin: 10px; background-color: skyblue;
+		border: 1px solid #000; position: relative;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		/*
+		.css()->.css({})
+		.attr()->.attr({})
+		.animate()->.animate({"속성":"값"})
+		"속성" -> 속성만써도 됨 단, 두 단어가 나오는 
+		예) background-color -> backgroundColor(두번째로 오는 단어가 대문자여야함) - 뒤에 오는 값은 ""사용
+		*/
+		$("div").eq(0).css({width:600, height:200, backgroundColor:"green","background-color":"green"})
+		$("div").eq(1).animate({width:1000, height:300, backgroundColor:"#336699", textIndent:30, fontSize:50},2000,"easeOutBounce")
+		// 블럭으로 들어가는 것들은 ""생략이 가능, but 문자로 들어가는 것들은 무조건 "" 사용해야함
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>
+
+
+
+
+

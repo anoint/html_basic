@@ -1,0 +1,23 @@
+#wrap{width: 100%; min-width: 1500px}
+/* 1500이후부터는 스크롤 바 생김 */
+#header{width: 100%; background-repeat: repeat-x;
+        background-position: 0 0;
+        background-image: url(../images/common/header/header_bg.jpg);}
+#header .inner-1180{width: 1180px; height: 140px; margin: auto; 
+                    position: relative;}
+.inner-1180 h1{position: absolute; left: 0; top: 15px;}
+.inner-1180 .top-menu{position: absolute; right: 0; top: 14px;}
+.inner-1180 .top-menu dt{}
+.inner-1180 .top-menu dd{float: left; margin-left: 10px;}
+.inner-1180 .top-menu dd a{font-size: 12px;}
+
+#nav{position: absolute; right: 0; top: 60px;}
+#gnb{}
+#gnb li{float: left; margin-left: 70px;}
+#gnb li a{font-size: 20px; color: #fff;
+          transition:0.3s; letter-spacing: 1px;
+          font-family: 'Anton', sans-serif;}
+#gnb li:hover a{color: lightskyblue;}
+
+#container{height: 100%;}
+#container:after{content: ''; display: block; clear: both;}

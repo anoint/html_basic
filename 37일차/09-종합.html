@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css"  />
+	<link rel="stylesheet" href="css/fonts.css"  />	
+	<script src="js/jquery.js"></script> 
+	<style>
+		#wrap{width: 100%; min-width: 1500px;}
+		.top-bar{width: 100%; height: 150px; 
+				 background:  #000; position: relative;}
+		.top-bar a{display: block; width: 50px; height: 50px;
+				   position: absolute; right: 300px; bottom: 0; font-weight: bold;
+				   background: #fff; text-align: center; line-height: 50px;}
+		#header{width: 100%; height: 200px; position: absolute;}
+		#header h1{position: absolute; left: 100px; top: 100px;}
+		#visual{width: 100%; height: 600px; position: relative;}
+		#visual .main-banner{width: 100%; height: 600px; position: relative;
+							 over flow: hidden; }
+		#visual .main-banner li{ width: 100%; height: 600px; position: absolute;
+								 background-repeat: no-repeat;
+								 background-position: 50% 50%;
+								 background-size: cover;
+		 }
+		#visual .main-banner li:nth-child(1){
+			background-image: url(images/img0.jpg);
+			
+		}
+		#visual .main-banner li:nth-child(2){
+			background-image: url(images/img1.jpg);
+			
+		}
+		#visual .main-banner li:nth-child(3){
+			background-image: url(images/img2.jpg);
+			
+		}
+		#visual .main-banner li:nth-child(4){
+			background-image: url(images/img3.jpg);
+			
+		}
+		#visual .paging{ position: absolute;
+		 				 left: 50%; bottom: 10px; 
+		 				 margin-left: -60px; }
+		#visual .paging li{width: 20px; height: 20px; border-radius: 50%;
+						float: left; margin-right: 10px; background: pink;}
+	</style>
+	<script>
+		$(function(){
+			/////////////////////////////////////
+			$(".top-bar a").click(function(){
+				$(".top-bar").slideUp();
+			});
+			//li 모두 숨기고 첫번째만 보여라
+			$("#visual .main-banner li").hide().first().show();
+			$("#visual .paging li").eq(3).click(function(){
+				$("#visual .main-banner li").hide();
+				$("#visual .main-banner li").eq(3).fadeIn();
+			});
+			////////////////////////////////////
+		})
+	</script>
+</head>
+<body>
+	<!-- div#wrap>(.top-bar>a[href=#]{X})+(header#header>h1>a[hre=#]>img)+section#visual>ul.main-banner>li*4^ul.paging>li*4 -->
+	<div id="wrap">
+		<div class="top-bar"><a href="#">X</a></div>
+		<header id="header">
+			<h1><a href="#"><img src="http://placehold.it/100x50" alt=""></a></h1>
+		</header>
+		<section id="visual">
+			<ul class="main-banner">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="paging">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</section>
+	</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

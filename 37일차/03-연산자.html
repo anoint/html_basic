@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>연산자</title>
+	<link rel="stylesheet" href="css/reset.css"  />
+	<link rel="stylesheet" href="css/fonts.css"  />	
+	<script src="js/jquery.js"></script> 
+	<style>
+
+	</style>
+	<script>
+		$(function(){
+			/////////////////////////////////////
+			//산술연산자
+			var a = 10, b = 50, c= 20, result = 0;
+			result = a + b + c;
+			document.write("합: "+result+"<br/>");
+			result = a - b;
+			document.write("차: "+result+"<br/>");
+			result = a* b;
+			document.write("곱: "+result+"<br/>");
+			result = a / c;
+			document.write("몫: "+result+"<br/>");
+			result = a % 2;
+			document.write("나머지: "+result+"<br/>");
+
+			//관계연산자
+			result = a > b;
+			document.write("a > b : "+result+"<br/>");
+			result = a == c;
+			document.write("a == c : "+result+"<br/>");
+			result = a != b;
+			document.write("a != b : "+result+"<br/>");
+
+			//논리연산자
+			result = ( a > b && a > c);
+			document.write("a > b && a > c : "+result+"<br/>");
+			result = (a == b || a > b); //둘중에 하나라도 맞으면 true
+			document.write("a == b || a > b : "+result+"<br/>");
+			result = !true
+			document.write("!true : "+result+"<br/>");
+			
+			//증감연산자
+			var cnt = 50;
+			cnt++; // cnt = cnt + 1 , cnt += 1;
+			document.write("cnt : "+cnt+"<br/>");
+			cnt--; // cnt = cnt - 1 , cnt -= 1;
+			document.write("cnt : "+cnt+"<br/>");
+
+			////////////////////////////////////
+		})
+	</script>
+</head>
+<body>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

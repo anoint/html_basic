@@ -1,0 +1,118 @@
+폰트기본
+
+
+
+IE -> Embedded Open Type(eot)
+Chrome, Firefox, Safari, Opera -> True Type Font(ttf), Open Type Font(otf)
+mobileSafari -> SVG Font(svg)
+
+--------------------------------
+
+브라우저별 지원폰트가 있는 경우..
+자신의 계정에 올려서 적용할 수 있음.
+
+    <style>
+        @font-face{
+        font-family: 사용자정의이름;
+            src:url(경로/폰트명.eot);
+            src:url(경로/폰트명.eot?#iefix) format('embedded-opentype'),
+                url(경로/폰트명.woff) format('woff'),
+                url(경로/폰트명.ttf) format('truetype')
+        }
+        body,th,td{
+            font-family: 사용자정의이름;
+        }
+    </style>
+
+
+
+----------------------------------------------------------------
+구글웹폰트 사용 : https://www.google.com/fonts
+구글에서 나눔폰트사용 : https://www.google.com/fonts/earlyaccess
+
+ 
+
+한글을 쓸때 주의점 
+  1. 진하게 font-weight: bold; 를 사용하지 않는다 
+  2. 브라우저에 따라 번저보이기 때문 
+  3. 해결 nanumB-> NanumGothic-Bold 사용한다
+
+ 
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+ 
+
+구글폰트 
+https://www.google.com/fonts/earlyaccess
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+
+body { font-family: 'Nanum Gothic Coding', serif; }
+
+
+나눔브러쉬 (Nanum Brush Script)
+
+나눔고딕(Nanum Gothic)
+
+나눔고딕코딩(Nanum Gothic Coding)
+
+나눔명조(Nanum Myeongjo)
+
+나눔펜(Nanum Pen Script)
+
+
+
+스포카 한 산스(Spoqa Han Sans) 글꼴 바로가기
+
+
+
+http://www.google.com/fonts/earlyaccess
+
+검색(ctrl+F)  -  korean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import 경로 연결해서 사용하기
+
+ 
+
+본고딕
+
+본고딕 다운받는 곳
+
+http://theeluwin.github.io/NotoSansKR-Hestia/
+
+ 
+
+구글 : http://www.google.com/get/noto/
+어도비 : http://blog.typekit.com/alternate/source-han-sans-kor/
+

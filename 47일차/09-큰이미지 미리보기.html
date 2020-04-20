@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	
+</style>
+<script>
+	$(function(){
+		/////////////
+		$(".box").hover(function(){
+			var div = $("<div>");
+			var img = $("<img>").attr("src","images/img0.png");
+			$("body").append(div);
+			div.append(img);
+		});
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div class="box">
+		<img src="images/img0.png" alt="" width="200">
+	</div>
+</body>
+</html>
+
+
+
+
+

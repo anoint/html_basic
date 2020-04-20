@@ -1,0 +1,31 @@
+#wrap{width: 100%;}
+#header{width: 100%;}
+#header .inner-wrap{width: 1180px; height: 150px; margin: auto; position: relative;}
+#header h1{position: absolute; left: 0; top: 50px;}
+#header .top-menu{position: absolute; right: 0; top: 10px;}
+#header .top-menu dt{}
+#header .top-menu dd{float: left; margin-left: 15px;}
+#header .top-menu dd a{font-size: 12px;}
+#nav{position: absolute; right: 0; top: 60px;}
+#gnb{position: relative;}
+#gnb li{float: left; margin-left: 80px;}
+#gnb li a{font-size: 18px;}
+
+#visual{width: 100%; height: 600px; position: relative;}
+#visual .main-banner{width: 100%; height: 600px; overflow: hidden;}
+#visual .main-banner li{position: absolute; width: 100%; height: 600px; left: 0; top: 0;
+						background-repeat: no-repeat;
+						background-position: 50% 50%;
+						background-image: url(../images/visua.png);
+						background-size: cover;
+					}
+
+#container{height: 100%; width: 1180px; margin: auto;}
+#container:after{display: block; content: ''; clear: both;}
+#content{}
+.inner{height: 700px; background: #dcdcdc;}
+.inner h2{font-size: 40px; margin-top: 40px;}
+
+#footer{width: 100%; margin-top: 40px;}
+#footer .inner-wrap{width: 1180px; height: 150px; margin: auto;}
+#footer address{padding-top: 50px; font-size: 16px;}

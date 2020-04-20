@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	ul{}
+	ul li{width: 600px; height: 50px; font-size: 25px; line-height: 2; text-indent: 40px; border: 1px solid #000;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		/*
+		var size = $("ul li").length; //개수 뽑아내기
+		for(var i = 0; i < size; i++){
+			$("ul li").eq(i).text("list"+i);
+		}
+		*/
+		/*
+		//li의 개수만큼 반복
+		$("ul li").each(function(c){ //function(변수)
+			$(this).text("list"+c);
+		});
+		*/
+		$("ul li").click(function(){
+			$("ul li").each(function(i){
+			$(this).css("background","green");
+			});
+		});
+		$("dl dt").each(function(index){
+			if(index == 0){
+				$(this).css("background","blue");
+			}else if(index == 2){
+				$(this).css("background","pink");
+			}
+		});
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<dl>
+		<dt>제목0</dt>
+		<dd>내용0</dd>
+		<dt>제목1</dt>
+		<dd>내용1</dd>
+		<dt>제목2</dt>
+		<dd>내용2</dd>
+		<dt>제목3</dt>
+		<dd>내용3</dd>
+	</dl>
+	<ul>
+		<li>list</li>
+		<li>list</li>
+		<li>list</li>
+		<li>list</li>
+		<li>list</li>
+		<li>list</li>
+		<li>list</li>
+		<li>list</li>
+		<li>list</li>
+		<li>list</li>
+	</ul>
+</body>
+</html>
+
+
+
+
+

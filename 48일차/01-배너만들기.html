@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	.wrap{width: 300px; margin: auto;}
+	.wrap .big-img{width: 300px; height: 387px;}
+	.wrap .big-img ul{position: relative; overflow: hidden;}
+	.wrap .big-img ul li{float: left;}
+
+	.wrap .small-img{width: 300px; position: relative; margin-top: 20px;}
+	.wrap .small-img ul{}
+	.wrap .small-img ul li{float: left; width: 100px; height: 100px; overflow: hidden;}
+	.wrap .small-img ul li img{width: 100px;}
+	.wrap .small-img span{width: 100px; height: 100px; 
+						  position: absolute; left: 0; top: 0; 
+						  border: 5px solid #f00; box-sizing: border-box;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		$(".wrap .big-img ul").width(1800);
+		$(".wrap .big-img").css("overflow","hidden");
+		var arrPosX = [0, -300, -600, -900, -1200, -1500] //큰 이미지의 좌표
+		var targetX = [0,100,200,0,100,200]
+		var targetY = [0,0,0,100,100,100]
+		var cnt = 0, timer = 0, delay = 3000;
+
+		timer = setInterval(make,delay);
+		function make(){
+			cnt++;
+			if(cnt > arrPosX.legnth-1){cnt = 0;}
+			banner();
+		}
+		$(".small-img ul li").hover(function(){
+			cnt = $(this).index();
+			banner();
+		});
+		
+		function banner(){
+			$(".wrap .big-img ul").stop().animate({left:arrPosX[cnt]},400);
+			$(".wrap .small-img span").stop().animate({left:targetX[cnt],top:targetY[cnt]},300);
+		};
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div class="wrap">
+	   	<div class="big-img">
+		    <ul>
+			    <li><img src="img/img1.jpg" alt="" /></li>
+			    <li><img src="img/img2.jpg" alt="" /></li>
+			    <li><img src="img/img3.jpg" alt="" /></li>
+			    <li><img src="img/img4.jpg" alt="" /></li>
+			    <li><img src="img/img5.jpg" alt="" /></li>
+			    <li><img src="img/img6.jpg" alt="" /></li>
+		    </ul>
+	    <!-- 큰이미지 -->
+	    </div>
+	    <div class="small-img">
+		    <ul>
+			    <li><img src="img/img1.jpg" alt="" /></li>
+			    <li><img src="img/img2.jpg" alt="" /></li>
+			    <li><img src="img/img3.jpg" alt="" /></li>
+			    <li><img src="img/img4.jpg" alt="" /></li>
+			    <li><img src="img/img5.jpg" alt="" /></li>
+			    <li><img src="img/img6.jpg" alt="" /></li>
+		    </ul>
+		    <span><!-- 빨간테두리 --></span>
+	    </div>
+    </div>
+</body>
+</html>
+
+
+
+
+

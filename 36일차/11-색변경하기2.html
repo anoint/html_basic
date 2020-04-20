@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css"  />
+	<link rel="stylesheet" href="css/fonts.css"  />	
+	<script src="js/jquery.js"></script> 
+	<style>
+		body{width: 1000px; margin: auto;}
+		.color-box{width: 600px; height: 400px; margin-bottom: 10px;
+				   border: 1px solid #000; font-size: 100px; line-height: 4;
+				   text-align: center;
+				  }
+		button{padding: 8px; font-size: 16px;}
+	</style>
+	<script>
+		$(function(){
+			/////////////////////////////////////
+			$("button").eq(0).click(function(){
+				$(".color-box").css("background","green").text($("button:eq(0)").text());
+				//버튼과 동일한 색, 버튼의 텍스트값을 칼라박스의 텍스트로 출력하기
+			});
+			$("button").eq(1).click(function(){
+				$(".color-box").css("background","yellow").text($("button:eq(1)").text());
+			});
+			$("button").eq(2).click(function(){
+				$(".color-box").css("background","red").text($("button:eq(2)").text());
+			});
+			$("button").eq(3).click(function(){
+				$(".color-box").css("background","blue").text($("button:eq(3)").text());
+			});
+			$("button").eq(4).click(function(){
+				$(".color-box").css("background","pink").text($("button:eq(4)").text());
+			});
+			////////////////////////////////////
+		})
+	</script>
+</head>
+<body>
+	<div class="color-box">
+		무슨색
+	</div>
+	<p>
+		<button>green</button>
+		<button>yellow</button>
+		<button>red</button>
+		<button>blue</button>
+		<button>pink</button>
+	</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

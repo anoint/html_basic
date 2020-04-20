@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+#wrap{width: 100%; min-width: 1500px;}
+#header{width: 100%; background: #292929;
+        border-bottom: 5px solid #000;}
+#header .inner-980{width: 980px; height: 130px; margin: auto;
+               position: relative;}
+#header h1{position: absolute; top: 35px; left: 0;}
+#nav{position: absolute; right: 0; top: 0;}
+#gnb{}
+#gnb li{float: left;}
+#gnb li a{color: #fff; display: block; width: 130px; height: 130px;
+          border-right: 1px solid #000; border-bottom: 5px solid transparent;
+          text-align: center; line-height: 130px; font-size: 20px;}
+
+#gnb li:first-child a{border-left: 1px solid #000;}
+#gnb li a:hover{color: #58c93a; border-bottom-color: #58c93a;}
+
+/* header ed */
+
+#container{height: 100%;}
+#container:after{content: '';display: block; clear: both;}
+#content{}
+.inner{ width: 978px; border-right: 1px solid #dcdcdc;
+        border-left: 1px solid #dcdcdc; margin: auto;
+        padding-top: 80px;}
+.inner article{width: 980px; height: 310px; 
+               margin-bottom: 80px; position: relative; }
+.inner article h2{font-size: 25px; 
+                  margin-bottom: 25px; margin-left: 500px;
+                  text-transform: uppercase;}
+.inner article p{font-size: 16px; margin-bottom: 25px;}
+.inner article p.pic{position: absolute; left: 0; top: 0;}
+.inner article p.pic img{width: 470px; height: 310px;}
+.inner article p.txt{margin-left: 500px;}
+.inner article span.more{display: block; margin-left: 500px;}
+.inner article span.more a{display: block; width: 180px; height: 40px;
+                           border-radius: 20px;
+                           border: 1px solid #333;
+                           background-repeat: no-repeat;
+                           background-position: 190px 0;
+                            text-align: center; line-height: 40px;}
+.inner article span.more a:hover{background-position-x: 160px;}
+.btn-wrap{border-top: 1px solid #dcdcdc; position: relative;}
+.btn-wrap .btn{position: absolute; }
+.btn-wrap .btn a{display: block; height: 75px; line-height: 75px;
+                 font-size: 16px; width: 180px;}
+.btn-wrap .prev{left: 0;}
+.btn-wrap .prev a {padding-left: 20px;}
+.btn-wrap .next{right: 0;}
+.btn-wrap .next a{text-align: right; padding-right: 20px;}
+
+#footer{width: 100%; height: 315px; border-top: 1px solid #000; margin-top: 100px;}
+.inner-980{width: 980px; margin: auto; text-align: center;}

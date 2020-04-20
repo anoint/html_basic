@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	
+</style>
+<script>
+	$(function(){
+		/////////////
+		$("a").click(function(){
+			//코드 맨 아래 링크 막아주기
+			return false;
+			alert("http://www.naver.com");
+		}); //return false는 멈추고 밖으로 나가는 역할(맨 마지막에 적어줘야함)
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<a href="http://www.naver.com">네이버</a>
+</body>
+</html>
+

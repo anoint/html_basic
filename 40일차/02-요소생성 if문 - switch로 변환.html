@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>요소생성 if문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<style>
+	div{width: 500px; height: 100px; 
+		font-size: 20px; line-height: 5; text-indent: 20px;
+		border: 1px solid #000;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		// 1. div를 생성해서 body에 붙이기
+		var div = $("<div>");
+		$("body").append(div);
+
+		var num = prompt("숫자를 입력하세요.");
+		/* 0-"0입력", 3-"3입력", 5-"5입력", 9-"9입력" -> 그 외 "꽝"
+		 => 다중if문으로 작성하기 */
+		 var mag = "";
+		 num = parseInt(num);
+
+		 switch(num){
+		 	case 0:mag ="0입력"; break;
+		 	case 3:mag ="3입력"; break;
+		 	case 5:mag ="5입력"; break;
+		 	case 9:mag ="9입력"; break;
+		 	default:mag="꽝";
+		 }
+		 $("div").text(mag);
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	
+</body>
+</html>
+
+
+
+
+

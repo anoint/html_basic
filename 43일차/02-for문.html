@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+</style>
+<script>
+	$(function(){
+		/////////////
+		/*
+		var cnt = 0;
+		for( ; ; ){ //무한반복 무한loop
+			cnt++;
+			alert(cnt);
+			if(cnt == 3){
+				break; //중단하고 빠져나와라 (ex)비번 3회 틀린 후 더이상 사용할수 없다 할 때 사용)
+			}
+		}
+		*/
+		for (var i = 0 ; i < 10; i++){
+			continue; //다시 처음으로 돌아가기
+			document.write(i);
+		}
+		document.write("최종값:"+i);
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	
+</body>
+</html>
+
+
+
+
+

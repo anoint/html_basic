@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<!-- meta:vp -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" href="css/reset.css" />
+	<style>	
+        .box1{padding: 30px;}
+        div{padding: 30px 0;
+            border-top: 1px solid #000;}
+        body{font-size: 50px;}
+/*        안에 자식에 자식들까지 부모의 값이 상속됨 */
+        .box1{}
+        .box2{font-size: 0.8em;}
+        .box3{font-size: 0.8em;}
+        .box4{font-size: 0.8em;}
+        .box5{font-size: 0.8em;}
+        .box6{font-size: 0.8em;}
+/*      각각 자신의 부모에게서 상속받기 때문에 글씨가 같은 크기가 아닌, 점점 작아진다 */
+	</style>
+</head>
+<body>
+<!--	div.box1{테스트입니다}>div.box2{테스트입니다2}>div.box3{테스트입니다3}>div.box4{테스트입니다4}>div.box5{테스트입니다5}>div.box6{테스트입니다6}-->
+	<div class="box1">테스트입니다1
+	    <div class="box2">테스트입니다2
+	        <div class="box3">테스트입니다3
+	            <div class="box4">테스트입니다4
+	                <div class="box5">테스트입니다5
+	                    <div class="box6">테스트입니다6</div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css"  />
+	<link rel="stylesheet" href="css/fonts.css"  />	 
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script> 
+<style>
+	.inner{width: 1300px; margin: auto;}
+	#nav{}
+	#nav li{width: 120px; float: left;
+			line-height: 2; height: 40px; text-align: center;
+	  		margin-right: 5px; background: #333; color: #fff;}
+	.con-box{overflow: hidden;}
+	.con-box div{width: 300px; height: 300px; 
+				 float: left; margin: 15px;}
+	.con-box .red{background: red;}
+	.con-box .green{background: green;}
+	.con-box .blue{background: blue;}
+</style>
+<script>
+	$(function() {
+ 		 var $container = $('.inner .con-box').isotope({
+   			 itemSelector: '.con-box div',
+   			 layoutMode: 'fitRows'
+  		});
+
+ 	$('#nav li').on('click', function() {
+    	var filterValue = $( this ).attr('data-filter');
+    	$container.isotope({ filter: filterValue })
+  	});
+  
+});
+</script>
+</head>
+<body>
+	<div class="inner">
+		<ul id="nav" class="cf">
+		    <li data-filter=".all">all</li>
+		    <li data-filter=".red">red</li>
+		    <li data-filter=".green">green</li>
+		    <li data-filter=".blue">blue</li>
+		</ul>
+	<!-- div.con-box>div.all.red*15 -->
+		<div class="con-box">
+			<div class="all red"></div>
+			<div class="all green"></div>
+			<div class="all blue"></div>
+			<div class="all red"></div>
+			<div class="all red"></div>
+			<div class="all green"></div>
+			<div class="all red"></div>
+			<div class="all green"></div>
+			<div class="all red"></div>
+			<div class="all red"></div>
+			<div class="all blue"></div>
+			<div class="all green"></div>
+			<div class="all blue"></div>
+			<div class="all red"></div>
+			<div class="all blue"></div>
+		</div>	
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

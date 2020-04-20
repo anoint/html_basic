@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<style>
+	div{width: 500px; height: 200px; background: green; margin: auto;
+		font-size: 100px; line-height: 2; text-align: center; color: #fff;}
+</style>
+<script>
+	$(function(){
+		/////////////
+		$("div").width(1000); //$("div").css("width","1000px");
+		var w = $("div").width();
+		
+		$("div").height(600);
+		var h = $("div").height();
+
+		$("div").text(h);
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	<div></div>
+	<button>크기</button>
+</body>
+</html>
+

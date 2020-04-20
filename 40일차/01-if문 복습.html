@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>제어문</title>	
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+<script src="js/jquery.js"></script>
+<style>
+</style>
+<script>
+	$(function(){
+		/////////////
+			var num1 =prompt("숫자를 입력하세요.");
+			var num2 =prompt("숫자를 입력하세요.");
+			var max = 0; min = 0;
+			num1 = parseInt(num1);
+			num2 = parseInt(num2);
+			/* if문으로 두 수를 비교하여 큰수를 ex) max:50, min: 20 */
+			/* if(num1 > num2){
+				alert("max:"+num1 + "min:"+num2);
+			} else {
+				alert("max:"+num2 + "min:"+num1);
+			} */ //내가 쓴것  (var max,min 없이)
+			if(num1 > num2){
+				max = num1;
+				min = num2;
+			} else {
+				max = num2;
+				min = num1;
+			}
+			alert("max:"+max+", min:"+min); 
+			//강사님이 알려주신고 (alert 두번 안쓰려고 변수넣고 한번만 적게 코딩) //판단문
+		////////////
+	})
+</script>
+	
+</head>
+<body>
+	
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css"  />
+	<link rel="stylesheet" href="css/fonts.css"  />	
+	<script src="js/jquery.js"></script> 
+	<style>
+		.big-img{margin-bottom: 15px;}
+	</style>
+	<script>
+		$(function(){
+			/////////////////////////////////////
+			$("button").eq(0).click(function(){
+				$(".big-img img").attr("src","images/img0.jpg");
+			});
+			$("button").eq(1).click(function(){
+				$(".big-img img").attr("src","images/img1.jpg").attr("width","300px").attr("title","이미지1번");
+			});
+			$("button").eq(2).click(function(){
+				$(".big-img img").attr({"src":"images/img2.jpg","width":"800px","height":"500px"})
+								 .attr("alt","대체텍스트").attr("title","이미지2 입니다.");
+			});
+			$("button").eq(3).click(function(){
+				$(".big-img img").attr({"src":"images/img3.jpg","width":"700px","height":"700px","title":"이미지 3번입니다."});
+			});
+			$("button").eq(4).click(function(){
+				$(".big-img img").attr("src","images/img4.jpg").attr("width","400px").attr("height","300px").attr("title","이미지 4번");
+			});
+			$("button").eq(5).click(function(){
+				$(".big-img img").attr({"src":"images/img5.jpg","alert":"이미지5번입니다."});
+			});
+			////////////////////////////////////
+		})
+	</script>
+</head>
+<body>
+	<div class="big-img">
+		<img src="images/img3.jpg" alt="">
+	</div>
+	<p>
+		<button>이미지0</button>
+		<button>이미지1</button>
+		<button>이미지2</button>
+		<button>이미지3</button>
+		<button>이미지4</button>
+		<button>이미지5</button>
+	</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
